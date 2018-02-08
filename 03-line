@@ -1,3 +1,3 @@
 #!/bin/sh
 
-if [ -z $1 ]; then; echo "You didn't type anything!"; elif [ -e $1 ]; then; echo "I see it."; else; echo "Blinded by science!"; fi
+if [ -z $1 ]; then echo "You didn't type anything!"; elif [ -e $1 ]; then echo "I see it."; else; echo "Blinded by science!"; fi

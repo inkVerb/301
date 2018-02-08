@@ -1,0 +1,17 @@
+#!/bin/sh
+
+read -p "Enter something
+" checkTHIS
+
+
+while [ -z ${checkTHIS} ]; do
+
+echo "You must comply. Resistance is futile."
+read -p "Enter something
+" checkTHIS
+
+done
+
+
+echo ${checkTHIS}
+

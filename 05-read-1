@@ -1,0 +1,4 @@
+#!/bin/sh
+
+read TYPE
+echo $TYPE

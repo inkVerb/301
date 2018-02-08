@@ -1,0 +1,4 @@
+#!/bin/sh
+
+read -rp "I'm waiting for your \"special\" characters... " inPut
+echo $inPut

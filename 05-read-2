@@ -1,0 +1,4 @@
+#!/bin/sh
+
+read -p "Please type something, then press Enter" TYPE
+echo $TYPE

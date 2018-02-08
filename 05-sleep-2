@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "Starting in 3..."
+sleep 3
+echo "You said: $1"
+echo "Five second pause for the suspense..."
+sleep 5
+echo "That's it."

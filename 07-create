@@ -1,0 +1,14 @@
+#!/bin/sh
+
+touch 1.z 2.z 3.z 4.z 5.z 6.z 7.z 8.z 9.z 0.z
+mkdir 1-Z 2-Z 3-Z 4-Z 5-Z 6-Z 7-Z 8-Z 9-Z 0-Z
+ln -s 1.z 1.l
+ln -s 2.z 2.l
+ln -s 3.z 3.l
+ln -s 4.z 4.l
+ln -s 5.z 5.l
+ln -s 6.z 6.l
+ln -s 7.z 7.l
+ln -s 8.z 8.l
+ln -s 9.z 9.l
+ln -s 0.z 0.l

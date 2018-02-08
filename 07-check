@@ -1,0 +1,90 @@
+#!/bin/sh
+
+# Instructions
+echo "Enter a file or directory to check.
+"
+
+read -p "Enter your choice now
+" checkTHIS
+
+
+# while test: what to check
+while [ -z "${checkTHIS}" ]; do
+
+echo "You must enter a file or directory to check.
+"
+read -p "Enter your choice now
+" checkTHIS
+
+done
+
+echo "I'll check for ${checkTHIS}, but first..."
+
+echo "Specify:
+f for files
+d for directories
+e for everything exists
+"
+
+read -p "Enter the type now
+" checkTYPE
+
+
+# while test: type
+while [ "${checkTYPE}" != "f" ] && [ "${checkTYPE}" != "d" ] && [ "${checkTYPE}" != "e" ]; do
+
+echo "You must specify:
+f for files
+d for directories
+e for everything exists
+"
+read -p "Enter the type now
+" checkTYPE
+
+done
+
+# if test: type
+if [ "${checkTYPE}" = "f" ]; then
+echo "File, got it."; fi
+
+if [ "${checkTYPE}" = "d" ]; then
+echo "Directory, got it."; fi
+
+if [ "${checkTYPE}" = "e" ]; then
+echo "Everything, got it."; fi
+
+
+# if test: whether it exists at all
+if [ ! -e "${checkTHIS}" ]; then
+echo "It doesn't exist at all."
+exit 0; fi
+
+
+# if test: by type
+## file
+if [ "${checkTYPE}" = "f" ]; then
+ if [ -f "${checkTHIS}" ]; then
+ echo "Yes, ${checkTHIS} exists and it is a file."
+
+### wrong type
+ elif [ -e "${checkTHIS}" ] && [ ! -f "${checkTHIS}" ]; then
+ echo "${checkTHIS} exists, but it is not a file."
+ fi
+
+## directory
+elif [ "${checkTYPE}" = "d" ]; then
+ if [ -d "${checkTHIS}" ]; then
+ echo "Yes, ${checkTHIS} exists and it is a directory."
+
+### wrong type
+ elif [ -e "${checkTHIS}" ] && [ ! -d "${checkTHIS}" ]; then
+ echo "${checkTHIS} exists, but it is not a directory."
+ fi
+
+## everything exists
+elif [ "${checkTYPE}" = "e" ]; then
+ if [ -f "${checkTHIS}" ]; then
+ echo "Yes, ${checkTHIS} exists."
+ fi
+
+fi

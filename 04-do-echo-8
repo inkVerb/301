@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for VAR in *.one; do
+echo "${VAR%one}two was $VAR"
+
+done

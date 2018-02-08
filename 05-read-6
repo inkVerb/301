@@ -1,0 +1,5 @@
+#!/bin/sh
+
+read -p "Enter something, then wait four seconds... " inPut
+sleep 4
+echo $inPut

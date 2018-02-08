@@ -1,0 +1,51 @@
+#!/bin/sh
+
+read -p "Enter a number
+" KnockOut
+
+
+# while test: nothing entered
+while [ -z ${KnockOut} ]; do
+
+echo "You must comply. Resistance is futile."
+read -p "Enter a number
+" KnockOut
+
+done
+
+
+# while test: not a positive integer
+while [ -n "$(printf '%s\n' "$KnockOut" | sed 's/[0-9]//g')" ]; do
+
+echo "Only whole numbers accepted"
+read -p "Enter a number
+" KnockOut
+
+done
+
+
+# if test: exit if nothing entered
+if [ -z ${KnockOut} ]; then
+echo "You're a dunce. I quit."
+## ALWAYS put a number with "exit", 0 won't report to log files
+exit 0
+fi
+
+
+# All is well, DO THE COUNT!
+thisCount=0
+
+while [ ${thisCount} != ${KnockOut} ]; do
+
+echo ${thisCount}
+# Make the counter go up
+thisCount=`expr ${thisCount} + 1`
+
+done
+
+# echo the input number to look cool
+echo "And wait for it..."
+sleep 2
+echo ${thisCount}
+sleep 1
+echo "BLAM! BLAM! She's in the water!"

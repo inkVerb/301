@@ -1,0 +1,4 @@
+#!/bin/sh
+
+read -p "Enter the name of the new file: " newFILE
+touch $newFILE

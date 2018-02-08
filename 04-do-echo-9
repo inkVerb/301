@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for VAR in *t.one; do
+echo "${VAR%t.one}T-ONE  <-- $VAR"
+
+done

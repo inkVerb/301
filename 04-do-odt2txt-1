@@ -1,0 +1,5 @@
+#!/bin/sh
+
+for FNM in *.odt; do
+echo `odt2txt $FNM` > ${FNM%odt}txt
+done

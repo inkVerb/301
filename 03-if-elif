@@ -3,10 +3,10 @@
 if [ -z $1 ]; then
 echo "You didn't type anything!"
 
-elif [ -e $1 ]; then
-echo "I see it."
+elif [ $1 = "yoyo" ]; then
+echo "I see it. It goes up and down."
 
 else
-echo "Blinded by science!"
+echo "Blinded by science! $1"
 
 fi

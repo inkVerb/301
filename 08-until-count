@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Set the variables
+stopCount=$1
+typeName=$2
+
+# Start a counter
+thisCount=0
+
+until [ ${thisCount} = ${stopCount} ]; do
+
+touch L_08.${thisCount}.${typeName}
+
+# Make the counter go up
+thisCount=`expr ${thisCount} + 1`
+
+done
+

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Set the variable
+passWORD=$1
+
+read -p "Enter the password
+" checkTHIS
+
+
+while [ ${checkTHIS} = ${passWORD} ]; do
+
+echo "Wrong."
+read -p "Enter the password
+" checkTHIS
+
+done
+
+
+echo "Yep, the password is: ${passWORD}
+All done here."
+

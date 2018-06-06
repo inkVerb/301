@@ -1,0 +1,69 @@
+#!/bin/sh
+
+# Set the variables
+word1=$1
+word2=$2
+word3=$3
+
+echo "Type a word to chat about..."
+
+# Start a do loop
+while :
+do
+ read myChoice
+
+# The case itself is a looping variable
+ case ${myChoice} in
+
+# Each WUT) is an option for the input, closing with ;;
+  verb)
+   echo "Grammar is good!"
+  ;;
+
+  ink)
+   echo "Yes, ink is a verb."
+  ;;
+
+  hi)
+   echo "Hey there!"
+  ;;
+
+  yoyo)
+   echo "It goes up; it goes down."
+  ;;
+
+# These are the variables entered
+  ${word1})
+   echo "I agree, ${word1}!"
+  ;;
+
+  ${word2})
+   echo "I agree, ${word2}!"
+  ;;
+
+  ${word3})
+   echo "I agree, ${word3}!"
+  ;;
+
+# "break" will end the do loop, so "byebye" ends the script
+  byebye)
+   echo "Ciao."
+   break
+  ;;
+
+# "break" will end the do loop, so "done" ends the script
+  done)
+   echo "Later mate."
+   break
+  ;;
+
+# * is the wildcard for all other possibilities not listed
+  *)
+   echo "I'm clueless. Type something else."
+  ;;
+
+ esac
+done
+
+echo "Great chat."
+

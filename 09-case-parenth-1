@@ -1,0 +1,45 @@
+#!/bin/sh
+
+echo "Choose an option..."
+
+# Start a do loop
+while :
+do
+ read myChoice
+
+# The case itself is a looping variable
+ case ${myChoice} in
+
+# Each WUT) is an option for the input, closing with ;;
+  a)
+   echo "You chose option A."
+  ;;
+
+  b)
+   echo "You chose option B."
+  ;;
+
+  v)
+   echo "You chose option V."
+  ;;
+
+  z)
+   echo "You chose option Z."
+  ;;
+
+# "break" will end the do loop, so "quit" ends the script
+  quit)
+   echo "I quit."
+   break
+  ;;
+
+# * is the wildcard for all other possibilities not listed
+  *)
+   echo "Not allowed. Try again"
+  ;;
+
+ esac
+done
+
+echo "All done."
+

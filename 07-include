@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# . means "include" the text from the indicated source file as text here
+#   regardless of that file's executable permissions
+
+# ./ means "here" or "PWD" (Present Working Directory)
+#    This is comparable to a "relative path" in web coding
+#    This could be an absolute path, such as: ~/Work/Guru/shell/301/07-included
+
+. ./07-included
+
+
+# Uncomment the line below to use the absolute path
+
+#. ~/Work/Guru/shell/301/07-included
+
+
+# Let's have some fun...
+
+echo $var56

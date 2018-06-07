@@ -1,0 +1,6 @@
+#!/bin/bash
+
+INPT=$1
+
+echo "\"$INPT\" has ${#INPT} characters."
+

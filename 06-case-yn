@@ -1,0 +1,22 @@
+#!/bin/sh
+
+echo -n "Do you agree? [yes or no]: "
+read YESNO
+
+case $YESNO in
+
+# This allows: y, Y, yes, YES, Yes, yEs, yeS, YEs, yES (spaces are optional, easier to see)
+ [yY] | [yY][eE][sS] )
+  echo "You agree."
+ ;;
+
+# This allows: n, N, no, NO, No, nO (spaces are optional, easier to see)
+ [nN] | [nN][oO] )
+  echo "Well, we can at least agree on that much without becoming disagreeable."
+ ;;
+
+ *) echo "Make up your mind and try again."
+ ;;
+
+esac
+

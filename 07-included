@@ -1,0 +1,8 @@
+echo "Hello, I'm included."
+
+echo "Code and setting variables all show up from the \"included\" file."
+
+# Setting a variable in the line below
+var56="Llama time!"
+
+echo "\"$var56\" should appear below:"

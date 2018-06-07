@@ -1,0 +1,44 @@
+#!/bin/sh
+
+INPT1=$1
+OPERT=$2
+INPT2=$3
+
+case $OPERT in 
+
+# + Plus
++)
+
+expr $INPT1 + $INPT2
+
+;;
+
+# - Minus
+-)
+
+expr $INPT1 - $INPT2
+
+;;
+
+# \* Multiplied by
+\*)
+
+expr $INPT1 \* $INPT2
+
+;;
+
+# / Divided by
+/)
+
+expr $INPT1 / $INPT2
+
+;;
+
+# % Modulus (remainder after divided)
+%)
+
+expr $INPT1 % $INPT2
+
+;;
+
+esac

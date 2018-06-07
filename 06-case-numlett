@@ -4,44 +4,41 @@
 myChoice=$1
 
 # Case for the number 1
-case ${myChoice}=1
+case ${myChoice} in
 
+1)
 echo "You chose a number. It is: one"
+;;
 
-esac
 
 # Case for the number 2
-case ${myChoice}=2
-
+2)
 echo "You chose a number. It is: two"
+;;
 
-esac
 
 # Case for the number 3
-case ${myChoice}=3
-
+3)
 echo "You chose a number. It is: three"
+;;
 
-esac
 
 # Case for the letter A
-case ${myChoice}=a
-
+a)
 echo "You chose a letter. It is: A"
+;;
 
-esac
 
 # Case for the letter B
-case ${myChoice}=b
-
+b)
 echo "You chose a letter. It is: B"
+;;
 
-esac
 
 # Case for the letter C
-case ${myChoice}=c
-
+c)
 echo "You chose a letter. It is: C"
+;;
 
 esac
 

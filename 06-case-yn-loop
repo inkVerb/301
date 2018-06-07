@@ -1,0 +1,27 @@
+#!/bin/sh
+
+echo -n "Do you agree? [yes or no]: "
+while :
+do
+ read YESNO
+
+ case $YESNO in
+
+  [yY]|[yY][eE][sS])
+   echo "You agree."
+# We should break to get out of here easily
+   break
+  ;;
+
+  [nN]|[nN][oO])
+   echo "Well, we can at least agree on that much without becoming disagreeable.";
+# An exit other than "exit 0" will generate an error log, which is useful for reference
+   exit 1
+  ;;
+
+  *) echo "Make up your mind and try again."
+# No break or exit because we want to try again
+  ;;
+
+ esac
+done

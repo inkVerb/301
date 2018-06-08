@@ -41,4 +41,6 @@ while getopts ":a:b:c:d:" flg; do
   ;;
 
  esac
-done 
+done
+#Clear $OPTIND from this getopts() function, just in case it is used later in this script
+shift "$((OPTIND-1))"

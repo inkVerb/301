@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Create a help or "How to use" message function
+function how_to_use()
+{
+ echo " How to use:
+ $0 [-a <option>] [-b <option>] [-c <option>] [-d <option>]
+ $0 -h ...will show this message."
+}
+
+while getopts ":a:b:c:d:" flg; do
+ case $flg in
+
+  a)
+   echo "Work with $OPTARG"
+  ;;
+
+  b) 
+   echo "Work with $OPTARG"
+  ;;
+
+  c)
+   echo "Work with $OPTARG"
+  ;;
+
+  d)
+   echo "Work with $OPTARG"
+  ;;
+
+# Call our "How to use" function
+## If used the -h option
+  h)
+   how_to_use
+   exit 0
+  ;;
+
+## If a wrong option is used
+  *)
+   how_to_use
+   exit 1
+  ;;
+
+ esac
+done 

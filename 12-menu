@@ -1,0 +1,21 @@
+#!/bin/bash
+
+OPTNS="Hi Yo-yo Quit"
+select input in $OPTNS; do
+
+ if [ "$input" = "Hi" ]; then
+  echo "Hi back at ya!"
+
+ elif [ "$input" = "Yo-yo" ]; then
+  echo "It goes up and down."
+
+ elif [ "$input" = "Quit" ]; then
+  echo "Quitting."
+  break
+
+ else
+  echo "Not an option. Try again."
+
+ fi
+done
+

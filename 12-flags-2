@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Create a help or "How to use" message function
+function how_to_use()
+{
+ echo " How to use:
+ $0 [-a|b|c|d <option>]
+ $0 -h ...will show this message."
+}
+
+Optns=":abcd"
+
+while getopts "${Optns}" flg; do
+ case $flg in
+  abcd)
+   :
+  ;;
+  \?)
+   echo "Unsupported option (-${OPTARG})" >&2
+   how_to_use
+   exit 1
+  ;;
+ esac
+done
+
+eval "FIRSTARG=\${${OPTIND}}"
+if [ -z "${FIRSTARG}" ]; then
+ how_to_use
+ exit 1
+fi
+
+OPTIND=1
+while getopts "${Optns}" flg; do
+ case $flg in
+
+  a)
+   echo "Work with $FIRSTARG"
+   ;;
+
+  b)
+   echo "Work with $FIRSTARG"
+   ;;
+
+  c)
+   echo "Work with $FIRSTARG"
+   ;;
+
+  d)
+   echo "Work with $FIRSTARG"
+   ;;
+
+  h)
+   how_to_use
+   exit 0
+  ;;
+
+ esac
+done    

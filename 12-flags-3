@@ -4,15 +4,15 @@
 function how_to_use()
 {
  echo " How to use:
- $0 [-a|b|c|d <option>]
+ $0 [-a <option> -b|c|d <option>]
  $0 -h ...will show this message."
 }
 
 # Alternate way to evaluate if a wrong flag is used, run this do loop first
-while getopts ":abcdh" flg; do
+while getopts ":a:bcde:" flg; do
  case $flg in
 ## Do nothing for valid flags
-  abcd)
+  abcde)
    :
   ;;
 
@@ -44,11 +44,11 @@ fi
 OPTIND=1
 
 # Get and run the options
-while getopts ":abcd" flg; do
+while getopts ":a:bcde:" flg; do
  case $flg in
 
   a)
-   echo "Work option A with $FIRSTARG"
+   echo "Work option A with $OPTARG"
    ;;
 
   b)
@@ -63,9 +63,16 @@ while getopts ":abcd" flg; do
    echo "Work option D with $FIRSTARG"
    ;;
 
+  e)
+   echo "Work option E with $OPTARG"
+   ;;
+
+  h)
+   how_to_use
+   exit 0
+  ;;
 ## If a wrong option is used
   *)
-   echo "Wrong."
    how_to_use
    exit 1
   ;;

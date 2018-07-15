@@ -8,7 +8,8 @@ function how_to_use()
  $0 -h ...will show this message."
 }
 
-while getopts ":a:b:c:d:" flg; do
+# Get and run the options
+while getopts ":a:b:c:d:h" flg; do
  case $flg in
 
   a)
@@ -30,12 +31,14 @@ while getopts ":a:b:c:d:" flg; do
 # Call our "How to use" function
 ## If used the -h option
   h)
+   echo "Great! You asked for help."
    how_to_use
    exit 0
   ;;
 
 ## If a wrong option is used
   *)
+   echo "Wrong."
    how_to_use
    exit 1
   ;;

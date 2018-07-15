@@ -34,19 +34,19 @@ while getopts "${Optns}" flg; do
  case $flg in
 
   a)
-   echo "Work with $FIRSTARG"
+   echo "Work option A with $FIRSTARG"
    ;;
 
   b)
-   echo "Work with $FIRSTARG"
+   echo "Work option B with $FIRSTARG"
    ;;
 
   c)
-   echo "Work with $FIRSTARG"
+   echo "Work option C with $FIRSTARG"
    ;;
 
   d)
-   echo "Work with $FIRSTARG"
+   echo "Work option D with $FIRSTARG"
    ;;
 
   h)

@@ -33,8 +33,8 @@ while getopts ":a:bcde:" flg; do
 done
 
 # Alternate way to evaluate if no option is used
-eval "FIRSTARG=\${${OPTIND}}"
-if [ -z "${FIRSTARG}" ]; then
+eval "GLOBALARG=\${${OPTIND}}"
+if [ -z "${GLOBALARG}" ]; then
  echo "You didn't set any options!"
  how_to_use
  exit 1
@@ -52,15 +52,15 @@ while getopts ":a:bcde:" flg; do
    ;;
 
   b)
-   echo "Work option B with $FIRSTARG"
+   echo "Work option B with $GLOBALARG"
    ;;
 
   c)
-   echo "Work option C with $FIRSTARG"
+   echo "Work option C with $GLOBALARG"
    ;;
 
   d)
-   echo "Work option D with $FIRSTARG"
+   echo "Work option D with $GLOBALARG"
    ;;
 
   e)

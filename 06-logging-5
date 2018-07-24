@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# This must be run as root or sudo!!
+
+# Make this script exit if something is wrong
+set -e
+
+# Make the log file readonly
+readonly /var/log/mylogfile.log
+
+# Create the log file so the system can do what's next
+touch /var/log/mylogfile.log
+
+# Have the operating system own the log file
+chown ubuntu /var/log/mylogfile.log
+
+# Log all normal STDOUT output in the log file
+exec 1>> /var/log/mylogfile.log
+
+# Redirect all STDERR ( 2> ) to become STDOUT ( 1> )
+exec 2>&1

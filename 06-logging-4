@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Make this script exit if something is wrong
+set -e
+
+# Log all normal STDOUT output in "all.log"
+exec 34>> 34file.log
+
+# Unnecessary message, then exit
+echo "This message isn't necessary, but it's working!"
+
+exit 34

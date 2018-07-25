@@ -4,7 +4,7 @@
 function how_to_use()
 {
  echo " How to use:
- $0 [-a|b|c|d <option>]
+ $0 -a|b|c|d <option>
  $0 -h ...will show this message."
 }
 

@@ -4,7 +4,7 @@
 function how_to_use()
 {
  echo " How to use:
- $0 [-a <option>] [-b <option>] [-c <option>] [-d <option>]
+ $0 -a <option> -b <option> -c <option> -d <option>
  $0 -h ...will show this message."
 }
 
@@ -47,3 +47,4 @@ while getopts ":a:b:c:d:h" flg; do
 done
 #Clear $OPTIND from this getopts() function, just in case it is used later in this script
 shift "$((OPTIND-1))"
+

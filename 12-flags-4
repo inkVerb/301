@@ -1,14 +1,11 @@
 #!/bin/bash
 
-##### THE CURRENT PROBLEM:
-# How to get the how_to_use function to urn when no options are set
-
-
 # Create a help or "How to use" message function
 function how_to_use()
 {
  echo " How to use:
- $0 [-a <option> -b|c|d|e]
+ $0 -a <option> -b|c|d|e
+ $0 --alpha <option> --beetle --ecko
  $0 -h ...will show this message.
  -a --alpha
  -b --beetle
@@ -18,6 +15,14 @@ function how_to_use()
  -h --help"
 }
 
+# If no options
+## getopt already handles invalid options, so this is all we need
+if [ -z $1 ]; then
+ echo "You didn't set any options!"
+ how_to_use
+ exit 1
+fi
+
 # Set the options as a variable
 myOptions=`getopt -o a:bcdeh -l alpha:,beetle,charlie,delta,ecko,help -n "$(basename "$0")" -- "$@"`
 #Alternative way to do the same thing
@@ -25,13 +30,6 @@ myOptions=`getopt -o a:bcdeh -l alpha:,beetle,charlie,delta,ecko,help -n "$(base
 
 # Run and check the options
 eval set --"$myOptions"
-
-# If no options
-if [ $? != 0 ]; then
- echo "You didn't set any options!"
- how_to_use
- exit 1
-fi
 
 # Set the OPTIND variable in case it is different 
 OPTIND=1
@@ -85,13 +83,6 @@ while [[ $# > 0 ]]; do
    exit 0
   ;;
 
-## Error for invalid flags
-  \?)
-   echo "You used an invalid flag q: $1" >&2
-   how_to_use
-   exit 2
-  ;;
-
 ## Finally break the loop (this will run 'break' no matter what)
   *)
    break
@@ -133,5 +124,4 @@ fi
 if [ $ecko = true ]; then
    echo "Work option E"
 fi
-
 

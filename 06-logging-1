@@ -1,9 +1,10 @@
 #!/bin/sh
 
-# Make this script exit if something is wrong
+# Make this script exit if there is an STDERR error message
 set -e
 
 # Log all STDERR error messages in "errors.log"
+#exec 2> errors.log  # Only one ">" would over-write the log file; we want to append the log file, so we use ">>"
 exec 2>> errors.log
 
 # Run ls

@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# Make this script exit if something is wrong
-set -e
+# To make custom error messages, we need this, not "set -e"
+set -o errexit
 
-# Log all normal STDOUT output in "all.log"
-exec 34>> 34file.log
+# Log "exit 3" output in "exit-3.log"
+exec 3>> exit-3.log
 
-# Unnecessary message, then exit
-echo "This message isn't necessary, but it's working!"
+# Create a message upon "exit 3" ( 3> )
+echo  "Hey there! I'm exiting THREE!" >&3
 
-exit 34
+exit 3

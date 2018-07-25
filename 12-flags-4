@@ -1,0 +1,69 @@
+#!/bin/bash
+
+# Create a help or "How to use" message function
+function how_to_use()
+{
+ echo " How to use:
+ $0 [-a <option> -b|c|d|e]
+ $0 -h ...will show this message."
+}
+
+# Set the options as a variable
+myOptions=`getopt -o :a:bcdeh --long alpha:,beetle,charlie,delta,ecko,help -n 'parse-options' -- "$@"`
+
+# Run and check the options
+eval set -- "$myOptions"
+
+# If no options
+if [ $? != 0 ]; then
+ echo "You didn't set any options!"
+ how_to_use
+ exit 1
+fi
+
+# Set the OPTIND variable in case it is different 
+OPTIND=1
+
+# Get and run the options
+while true; do
+ case $1 in
+
+  -a | --alpha )
+   echo "Work option A with $2"; shift
+   ;;
+
+  -b | --beetle )
+   echo "Work option B"; shift
+   ;;
+
+  -c | --charlie )
+   echo "Work option C"; shift
+   ;;
+
+  -d | --delta )
+   echo "Work option D"; shift
+   ;;
+
+  -e | --ecko )
+   echo "Work option E"; shift
+   ;;
+
+## Help
+  -h | --help )
+   echo "You asked for help!"; shift
+   how_to_use
+   exit 0
+  ;;
+
+## Error for invalid flags
+  \?)
+   echo "You used an invalid flag: -${OPTARG}" >&2
+   how_to_use
+   exit 1
+  ;;
+
+ esac
+done
+
+#Clear $OPTIND from this getopts() function, just in case it is used later in this script
+shift "$((OPTIND-1))"

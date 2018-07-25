@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Make this script exit if something is wrong
+# Make this script exit if there is an STDERR error message
 set -e
 
 # Log all normal STDOUT output in "all.log"

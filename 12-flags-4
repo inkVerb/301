@@ -1,18 +1,30 @@
 #!/bin/bash
 
+##### THE CURRENT PROBLEM:
+# How to get the how_to_use function to urn when no options are set
+
+
 # Create a help or "How to use" message function
 function how_to_use()
 {
  echo " How to use:
  $0 [-a <option> -b|c|d|e]
- $0 -h ...will show this message."
+ $0 -h ...will show this message.
+ -a --alpha
+ -b --beetle
+ -c --charlie
+ -d --delta
+ -e --ecko
+ -h --help"
 }
 
 # Set the options as a variable
-myOptions=`getopt -o :a:bcdeh --long alpha:,beetle,charlie,delta,ecko,help -n 'parse-options' -- "$@"`
+myOptions=`getopt -o a:bcdeh -l alpha:,beetle,charlie,delta,ecko,help -n "$(basename "$0")" -- "$@"`
+#Alternative way to do the same thing
+#myOptions=$(getopt --options a:bcdeh --longoptions :alpha:,beetle,charlie,delta,ecko,help --name "$(basename "$0")" -- "$@")
 
 # Run and check the options
-eval set -- "$myOptions"
+eval set --"$myOptions"
 
 # If no options
 if [ $? != 0 ]; then
@@ -24,42 +36,65 @@ fi
 # Set the OPTIND variable in case it is different 
 OPTIND=1
 
+# Set the variables to false
+alpha=false
+beetle=false
+charlie=false
+delta=false
+ecko=false
+helpme=false
+nothing=false
+
 # Get and run the options
-while true; do
+## This evaluates if parameters are present: [[ $# -gt 0 ]]
+while [[ $# > 0 ]]; do
  case $1 in
 
   -a | --alpha )
-   echo "Work option A with $2"; shift
+   alpha=true
+   alphaOPTION="$2"
+### shift 2 moves 2 variables over since one variable is the setting for option -a
+   shift 2
    ;;
 
   -b | --beetle )
-   echo "Work option B"; shift
+   beetle=true
+### shift 1 only moves 1 variable over since these options don't have settings
+   shift 1
    ;;
 
   -c | --charlie )
-   echo "Work option C"; shift
+   charlie=true
+   shift 1
    ;;
 
   -d | --delta )
-   echo "Work option D"; shift
+   delta=true
+   shift 1
    ;;
 
   -e | --ecko )
-   echo "Work option E"; shift
+   ecko=true
+   shift 1
    ;;
 
 ## Help
   -h | --help )
-   echo "You asked for help!"; shift
+   echo "You asked for help!"
    how_to_use
    exit 0
   ;;
 
 ## Error for invalid flags
   \?)
-   echo "You used an invalid flag: -${OPTARG}" >&2
+   echo "You used an invalid flag q: $1" >&2
    how_to_use
-   exit 1
+   exit 2
+  ;;
+
+## Finally break the loop (this will run 'break' no matter what)
+  *)
+   break
   ;;
 
  esac
@@ -67,3 +102,36 @@ done
 
 #Clear $OPTIND from this getopts() function, just in case it is used later in this script
 shift "$((OPTIND-1))"
+
+# Run the actions based on what was set above
+## Help
+
+## Error for nothing
+if [ $nothing = true ]; then
+   echo "You didn't set any options!" >&2
+   how_to_use
+   exit 2
+fi
+
+## Normal options
+if [ $alpha = true ]; then
+   echo "Work option A with $alphaOPTION"
+fi
+
+if [ $beetle = true ]; then
+   echo "Work option B"
+fi
+
+if [ $charlie = true ]; then
+   echo "Work option C"
+fi
+
+if [ $delta = true ]; then
+   echo "Work option D"
+fi
+
+if [ $ecko = true ]; then
+   echo "Work option E"
+fi
+
+

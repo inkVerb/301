@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# We can also just put the normal dialog in an if statement, but don't use []
+if dialog --title "Quick Question" --yesno "Do you ink?" 5 19; then
+
+# Answer is yes
+dialog --title "You ink!" --msgbox "Great!\nGlad to see that you are already inking!" 9 23
+
+else
+
+# Answer is no
+dialog --title "You don't!" --msgbox "Well, then you need to get inking!" 8 23
+
+fi

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Run the dialog first
+dialog --title "Quick Question" --yesno "Do you ink?" 5 18
+
+# Test if the last exit code was "0"
+## This must be an if then else, testing for "1" later will return this if test, not dialog!
+if [ $? = 0 ]; then
+
+# Answer is yes
+echo "Great! Glad to see that you are already inking!"
+
+else
+
+# Answer is no
+echo "Well, then you need to get inking!"
+
+fi

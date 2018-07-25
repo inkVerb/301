@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Put the dialog output as a variable
+## This MUST be at the end to make it work: "3>&1 1>&2 2>&3 3>&-"
+mySize=$(dialog --menu "Choose:" 11 23 4 1 X-Large 2 Large 3 Medium 4 Small 3>&1 1>&2 2>&3 3>&-)
+
+## Feel free to re-uncomment and try without
+#mySize=$(dialog --menu "Choose:" 11 23 4 1 X-Large 2 Large 3 Medium 4 Small)
+
+# X-Large
+if [ $mySize = 1 ]; then
+dialog --title "Your Size" --msgbox "X-Large" 9 12
+
+# Large
+elif [ $mySize = 2 ]; then
+dialog --title "Your Size" --msgbox "Large" 9 12
+
+# Medium
+elif [ $mySize = 3 ]; then
+dialog --title "Your Size" --msgbox "Medium" 9 12
+
+# Small
+elif [ $mySize = 4 ]; then
+dialog --title "Your Size" --msgbox "Small" 9 12
+fi

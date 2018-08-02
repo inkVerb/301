@@ -1,6 +1,9 @@
 #!/bin/sh
 
-if [ -d $1 ]; then
+if [ -d $1 ]
+
+then
+
 echo "Yes."
 
 fi

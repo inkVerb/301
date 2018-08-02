@@ -1,9 +1,13 @@
 #!/bin/sh
 
-if [ -f $1 ]; then
+if [ -f $1 ]
+
+then
+
 echo "Deal."
 
 else
+
 echo "Sorry, Bucko! No deal."
 
 fi

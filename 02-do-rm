@@ -1,6 +1,6 @@
 #!/bin/sh
 
 for VAR in *TWO*; do
-rm -f $VAR
+rm $VAR
 
 done

@@ -8,24 +8,32 @@ function how_to_use()
  $0 -h ...will show this message."
 }
 
+# If no option is used
+eval "GLOBALARG=\${${OPTIND}}"
+if [ -z "${GLOBALARG}" ]; then
+ echo "You didn't set any options!"
+ how_to_use
+ exit 1
+fi
+
 # Get and run the options
 while getopts ":a:b:c:d:h" flg; do
  case $flg in
 
   a)
-   echo "Work with $OPTARG"
+   echo "Work with $OPTARG using flag -$flg"
   ;;
 
   b) 
-   echo "Work with $OPTARG"
+   echo "Work with $OPTARG using flag -$flg"
   ;;
 
   c)
-   echo "Work with $OPTARG"
+   echo "Work with $OPTARG using flag -$flg"
   ;;
 
   d)
-   echo "Work with $OPTARG"
+   echo "Work with $OPTARG using flag -$flg"
   ;;
 
 # Call our "How to use" function
@@ -45,6 +53,7 @@ while getopts ":a:b:c:d:h" flg; do
 
  esac
 done
+
 #Clear $OPTIND from this getopts() function, just in case it is used later in this script
 shift "$((OPTIND-1))"
 

@@ -41,7 +41,6 @@ charlie=false
 delta=false
 ecko=false
 helpme=false
-nothing=false
 
 # Get and run the options
 ## This evaluates if parameters are present: [[ $# -gt 0 ]]
@@ -96,13 +95,6 @@ shift "$((OPTIND-1))"
 
 # Run the actions based on what was set above
 ## Help
-
-## Error for nothing
-if [ $nothing = true ]; then
-   echo "You didn't set any options!" >&2
-   how_to_use
-   exit 2
-fi
 
 ## Normal options
 if [ $alpha = true ]; then

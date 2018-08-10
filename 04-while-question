@@ -4,7 +4,9 @@ read -p "Enter something
 " checkTHIS
 
 
-while [ -z ${checkTHIS} ]; do
+while [ -z ${checkTHIS} ]
+
+do
 
 echo "You must comply. Resistance is futile."
 read -p "Enter something

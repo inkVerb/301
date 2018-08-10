@@ -19,6 +19,10 @@ do
    echo "You chose option B."
   ;;
 
+  f|g)
+   echo "You chose either option F or G, not sure which tho."
+  ;;
+
   v)
    echo "You chose option V."
   ;;

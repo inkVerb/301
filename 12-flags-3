@@ -8,7 +8,7 @@ function how_to_use()
  $0 -h ...will show this message."
 }
 
-# Alternate way to evaluate if a wrong flag is used, run this do loop first
+# Evaluate proper flags
 while getopts ":a:bcde:" flg; do
  case $flg in
 ## Do nothing for valid flags
@@ -32,7 +32,7 @@ while getopts ":a:bcde:" flg; do
  esac
 done
 
-# Alternate way to evaluate if no option is used
+# If no option is used
 eval "GLOBALARG=\${${OPTIND}}"
 if [ -z "${GLOBALARG}" ]; then
  echo "You didn't set any options!"

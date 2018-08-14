@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for VAR in *T-ONE; do
+mv $VAR "${VAR%t.one}t.THREE"
+
+done

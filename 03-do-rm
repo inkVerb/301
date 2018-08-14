@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for VAR in *TWO*; do
+for VAR in *THREE*; do
 rm $VAR
 
 done

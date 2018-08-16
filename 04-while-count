@@ -6,8 +6,9 @@ thisCount=0
 while [ ${thisCount} != 15 ]; do
 
 echo ${thisCount}
+sleep 1
 
-# Make the counter go up
+# Make the counter number increase by 1 (learn more in Lesson 9)
 thisCount=`expr ${thisCount} + 1`
 
 done

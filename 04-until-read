@@ -6,8 +6,8 @@ passWORD=$1
 read -p "Enter the password
 " checkTHIS
 
-
-while [ ${checkTHIS} = ${passWORD} ]; do
+# This variable needs "quotes" in case the value has a space so it doesn't break the test
+while [ "${checkTHIS}" != "${passWORD}" ]; do
 
 echo "Wrong."
 read -p "Enter the password

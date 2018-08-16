@@ -3,8 +3,8 @@
 read -p "Enter something
 " checkTHIS
 
-
-while [ -z ${checkTHIS} ]
+# This variable needs "quotes" in case the value has a space so it doesn't break the test
+while [ -z "${checkTHIS}" ]
 
 do
 

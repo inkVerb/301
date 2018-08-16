@@ -9,9 +9,11 @@ thisCount=0
 
 until [ ${thisCount} = ${stopCount} ]; do
 
-touch L_08.${thisCount}.${typeName}
+touch L_04.${thisCount}.${typeName}
+# sleep to make it work slowly enough to watch
+sleep 1
 
-# Make the counter go up
+# Make the counter number increase by 1 (learn more in Lesson 9)
 thisCount=`expr ${thisCount} + 1`
 
 done

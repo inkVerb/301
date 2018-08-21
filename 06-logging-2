@@ -6,8 +6,8 @@ set -e
 # Log all normal STDOUT output in "normal.log"
 exec 1>> normal.log
 
-# Log all STDERR error messages in "errors.log"
-exec 2>> errors.log
+# Log all STDERR error messages in "error.log"
+exec 2>> error.log
 
 # Run ls
 ls

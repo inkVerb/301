@@ -3,9 +3,9 @@
 # Make this script exit if there is an STDERR error message
 set -e
 
-# Log all STDERR error messages in "errors.log"
-#exec 2> errors.log  # Only one ">" would over-write the log file; we want to append the log file, so we use ">>"
-exec 2>> errors.log
+# Log all STDERR error messages in "error.log"
+#exec 2> error.log  # Only one ">" would over-write the log file; we want to append the log file, so we use ">>"
+exec 2>> error.log
 
 # Run ls
 ls

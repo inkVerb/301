@@ -5,14 +5,14 @@
 
 # ./ means "here" or "PWD" (Present Working Directory)
 #    This is comparable to a "relative path" in web coding
-#    This could be an absolute path, such as: ~/School/Guru/shell/301/07-included
+#    This could be an absolute path, such as: ~/School/VIP/shell/301/07-included
 
 . ./07-included
 
 
 # Uncomment the line below to use the absolute path
 
-#. ~/School/Guru/shell/301/07-included
+#. ~/School/VIP/shell/301/07-included
 
 
 # Let's have some fun...

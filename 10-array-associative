@@ -8,6 +8,10 @@ myArray[iv]=four
 myArray[v]=five
 echo ${myArray[$1]}
 
+# Quit here if no second variable
+if [ -z "$2" ]; then
+exit 0; fi
+
 declare -A myArrayWik
 myArrayWik=([I]=ONE [II]=TWO [III]=THREE [IV]=FOUR [V]=FIVE)
 echo ${myArrayWik[$2]}

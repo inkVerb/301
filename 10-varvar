@@ -2,14 +2,8 @@
 
 inputVariable="$1"
 WORD=Variable
-scriptVariable="input${WORD}"
+scriptVariable="input${WORD}" #so scriptVariable="inputVariable"
 # ${WORD} = "Variable", so "input${WORD}" = "inputVariable"
 
-echo "You input this into the terminal:		 $1"
-
-echo "It was set to the value of this variable:	\$inputVariable"
-
-echo "This is the text value of \$scriptVariable:	 $scriptVariable"
-
-echo "This is the value of that, \$$scriptVariable:	 ${!scriptVariable}"
+echo "$1		$scriptVariable		${!scriptVariable}"
 

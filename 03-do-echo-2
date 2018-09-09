@@ -1,6 +1,8 @@
 #!/bin/sh
 
-for VAR in one-1*; do
+for VAR in one-1*
+
+do
 
 echo $VAR
 sleep 1

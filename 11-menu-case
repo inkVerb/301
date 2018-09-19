@@ -1,0 +1,26 @@
+#!/bin/bash
+
+OPTNS="Hi Yo-yo Quit"
+select input in $OPTNS; do
+ case $input in
+
+  Hi)
+  echo "Hi back at ya!"
+  ;;
+
+  Yo-yo)
+  echo "It goes up and down."
+  ;;
+
+  Quit)
+  echo "Quitting."
+  break
+  ;;
+
+  *)
+  echo "Not an option. Try again."
+  ;;
+
+ esac
+done
+

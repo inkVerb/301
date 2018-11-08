@@ -3,12 +3,13 @@
 # . means "include" the text from the indicated source file as text here
 #   regardless of that file's executable permissions
 
+echo "This is from '. INCLUDED-FILE'"
+
 # ./ means "here" or "PWD" (Present Working Directory)
 #    This is comparable to a "relative path" in web coding
 #    This could be an absolute path, such as: ~/School/VIP/shell/301/07-included
 
 . ./07-included
-
 
 # Uncomment the line below to use the absolute path
 
@@ -18,3 +19,13 @@
 # Let's have some fun...
 
 echo $var56
+
+# Now, done differently with "source" instead of a "."
+
+echo "This is from 'source INCLUDED-FILE'"
+
+source ./07-included-also
+
+echo $ALSOvar56
+
+echo "Point: Use '. ' or 'source ' to \"include\" text from another script in your script"

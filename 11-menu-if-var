@@ -1,6 +1,7 @@
 #!/bin/bash
 
-select input in Hi Yo-yo Quit; do
+OPTNS="Hi Yo-yo Quit"
+select input in $OPTNS; do
 
  if [ "$input" = "Hi" ]; then
   echo "Hi back at ya!"

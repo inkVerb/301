@@ -7,23 +7,31 @@ mySize=$(dialog --menu "Choose:" 11 23 4 1 X-Large 2 Large 3 Medium 4 Small 3>&1
 ## Feel free to uncomment and try without
 #mySize=$(dialog --menu "Choose:" 11 23 4 1 X-Large 2 Large 3 Medium 4 Small)
 
+case $mySize in
+
 # X-Large
-if [ $mySize = 1 ]; then
-echo "Option $mySize (X-Large)" >> size.file
-dialog --title "Your Size" --msgbox "X-Large" 9 12
+ 1)
+ echo "Option $mySize (X-Large)" >> size.file
+ dialog --title "Your Size" --msgbox "X-Large" 9 12
+ ;;
 
 # Large
-elif [ $mySize = 2 ]; then
-echo "Option $mySize (Large)" >> size.file
-dialog --title "Your Size" --msgbox "Large" 9 12
+ 2)
+ echo "Option $mySize (Large)" >> size.file
+ dialog --title "Your Size" --msgbox "Large" 9 12
+ ;;
 
 # Medium
-elif [ $mySize = 3 ]; then
-echo "Option $mySize (Medium)" >> size.file
-dialog --title "Your Size" --msgbox "Medium" 9 12
+ 3)
+ echo "Option $mySize (Medium)" >> size.file
+ dialog --title "Your Size" --msgbox "Medium" 9 12
+ ;;
 
 # Small
-elif [ $mySize = 4 ]; then
-echo "Option $mySize (Small)" >> size.file
-dialog --title "Your Size" --msgbox "Small" 9 12
-fi
+ 4)
+ echo "Option $mySize (Small)" >> size.file
+ dialog --title "Your Size" --msgbox "Small" 9 12
+ ;;
+
+esac
+

@@ -4,7 +4,7 @@
 ## This MUST be at the end to make it work: "3>&1 1>&2 2>&3 3>&-"
 mySize=$(dialog --menu "Choose:" 11 23 4 1 X-Large 2 Large 3 Medium 4 Small 3>&1 1>&2 2>&3 3>&-)
 
-## Feel free to re-uncomment and try without
+## Feel free to uncomment and try without
 #mySize=$(dialog --menu "Choose:" 11 23 4 1 X-Large 2 Large 3 Medium 4 Small)
 
 case $mySize in

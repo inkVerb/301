@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# The same options can go to an output file, but without a case loop, there is no follow-up dialog
+dialog --menu "Choose:" 11 23 4 1 X-Large 2 Large 3 Medium 4 Small 2> size.file
+
+

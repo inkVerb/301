@@ -9,7 +9,7 @@ echo "This is from '. INCLUDED-FILE'"
 #    This is comparable to a "relative path" in web coding
 #    This could be an absolute path, such as: ~/School/VIP/shell/301/07-included
 
-. ./07-included
+. ./07-sourced
 
 # Uncomment the line below to use the absolute path
 
@@ -24,7 +24,7 @@ echo $var56
 
 echo "This is from 'source INCLUDED-FILE'"
 
-source ./07-included-also
+source ./07-sourced-also
 
 echo $ALSOvar56
 

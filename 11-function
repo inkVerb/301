@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 myFunction() {
 echo "Hello functioning world!"

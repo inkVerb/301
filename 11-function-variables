@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Set the variables outside the function
 varOne=$1

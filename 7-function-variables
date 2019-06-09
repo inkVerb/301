@@ -1,36 +1,38 @@
 #!/bin/sh
 
-# Set the variables outside the function
-varOne=$1
-varTwo=$2
-varThr=$3
+# Set the global variables outside the function
+varGlobalOne=$1
+varGlobalTwo=$2
 
 functionName() {
 
-functVarOne=$1
-functVarTwo=$2
+local varLocalOne=$1
+local varLocalTwo=$2
 
+echo "\"global\" variables used inside the function:
 
-local myVariable=Saucy
+varGlobalOne = $varGlobalOne
+varGlobalTwo = $varGlobalTwo
 
-echo "VIP Linux tutorials are $myVariable!"
-echo "That's why I like $functVarOne and $functVarTwo!"
-echo "Thirdly, you chose the global variable: $varThr!"
+\"local\" variables used inside the function:
+
+varLocalOne = $varLocalOne
+varLocalTwo = $varLocalTwo
+"
 
 }
 
 echo "First, run the function..."
 
-functionName $varOne $varTwo
+functionName $varGlobalOne $varGlobalTwo
 
-echo "Global variables outside the function:
+echo "\"global\" variables used outside the function:
 
-varOne = $varOne
-varTwo = $varTwo
-varThr = $varThr
+varGlobalOne = $varGlobalOne
+varGlobalTwo = $varGlobalTwo
 
-\"local\" variables inside the function:
+\"local\" variables used outside the function:
 
-functVarOne = $functVarOne
-functVarTwo = $functVarTwo
+varLocalOne = $varLocalOne
+varLocalTwo = $varLocalTwo
 "

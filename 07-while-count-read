@@ -5,7 +5,7 @@ read -p "Enter a number
 
 
 # while test: nothing entered
-while [ -z ${KnockOut} ]; do
+while [ -z "${KnockOut}" ]; do
 
 echo "You must comply. Resistance is futile."
 read -p "Enter a number
@@ -25,7 +25,7 @@ done
 
 
 # if test: exit if nothing entered
-if [ -z ${KnockOut} ]; then
+if [ -z "${KnockOut}" ]; then
 echo "You're a dunce. I quit."
 ## ALWAYS put a number with "exit", 0 won't report to log files
 exit 0
@@ -35,17 +35,17 @@ fi
 # All is well, DO THE COUNT!
 thisCount=0
 
-while [ ${thisCount} != ${KnockOut} ]; do
+while [ "${thisCount}" != "${KnockOut}" ]; do
 
-echo ${thisCount}
+echo "${thisCount}"
 # Make the counter go up
-thisCount=`expr ${thisCount} + 1`
+thisCount="$(expr ${thisCount} + 1)"
 
 done
 
 # echo the input number to look cool
 echo "And wait for it..."
 sleep 2
-echo ${thisCount}
+echo "${thisCount}"
 sleep 1
 echo "BLAM! BLAM! She's in the water!"

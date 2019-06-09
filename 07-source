@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # . means "include" the text from the indicated source file as text here
 #   regardless of that file's executable permissions
@@ -9,23 +9,23 @@ echo "This is from '. INCLUDED-FILE'"
 #    This is comparable to a "relative path" in web coding
 #    This could be an absolute path, such as: ~/School/VIP/shell/301/07-included
 
-. ./07-sourced
-
-# Uncomment the line below to use the absolute path
-
-#. ~/School/VIP/shell/301/07-included
+. ~/School/VIP/shell/301/07-sourced
 
 
 # Let's have some fun...
 
-echo $var56
+echo "$var56"
 
 # Now, done differently with "source" instead of a "."
 
-echo "This is from 'source INCLUDED-FILE'"
+# Lines 24 & 27 only work in BASH (#!/bin/bash), not Shell (#!/bin/sh)
 
-source ./07-sourced-also
+# This uses a "local" path, not a full path
+#. ./07-sourced
 
-echo $ALSOvar56
+# In BASH, "source" = .
+#source ./07-sourced-also
 
-echo "Point: Use '. ' or 'source ' to \"include\" text from another script in your script"
+echo "$ALSOvar56"
+
+echo "In BASH: Use '. ' or 'source ' to \"include\" text from another script in your script"

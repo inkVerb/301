@@ -5,7 +5,7 @@ functionName() {
 varOne=$1
 varTwo=$2
 
-local myVariable=Saucy
+local myVariable="Saucy"
 
 echo "VIP Linux tutorials are $myVariable!"
 echo "That's why I like $varOne and $varTwo!"

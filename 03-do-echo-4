@@ -2,6 +2,6 @@
 
 for VAR in *t.one; do
 
-echo $VAR
+echo "$VAR"
 
 done

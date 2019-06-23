@@ -1,0 +1,13 @@
+#!/bin/sh
+
+for VAR in one-*; do
+
+echo "$VAR here"
+
+ if [ "$VAR" = "one-3" ]; then
+  break
+ fi
+
+echo "$VAR ----there"
+
+done

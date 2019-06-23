@@ -1,5 +1,5 @@
 #!/bin/sh
 
 for VAR in 3.*; do
-echo $VAR
+echo "$VAR"
 done

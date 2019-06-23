@@ -2,7 +2,7 @@
 
 for VAR in *.one; do
 
-echo $VAR
+echo "$VAR"
 sleep 1
 
 done

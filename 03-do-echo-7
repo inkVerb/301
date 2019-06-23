@@ -1,5 +1,5 @@
 #!/bin/sh
 
 for VAR in *one*; do
-echo $VAR "is a file."
+echo "$VAR is a file."
 done

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for VAR in *T-ONE; do
+for VAR in *t.one; do
 mv $VAR "${VAR%t.one}t.THREE"
 
 done

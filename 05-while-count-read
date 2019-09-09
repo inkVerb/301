@@ -1,33 +1,38 @@
 #!/bin/sh
 
 read -p "Enter a number to count to
-" thisCount
+" countTo
 
-while [ -z ${thisCount} ]
+# 1 while
+while [ -z ${countTo} ]
 
 do
 
 echo "You must comply. Resistance is futile."
 read -p "Enter a number to count to
-" thisCount
+" countTo
 
 done
 
 # Talk back
-echo "'ight, counting..."
+echo "'ight, counting to ${countTo}..."
 sleep 1
-
 
 # Start a counter
 thisCount=0
 
-while [ ${thisCount} != 15 ]; do
+# 2 while
+while [ ${thisCount} -le ${countTo} ]
 
+do
+
+# echo the count
 echo ${thisCount}
+
+# wait one second
 sleep 1
 
-# Make the counter number increase by 1 (learn more in Lesson 9)
+# add 1
 thisCount=`expr ${thisCount} + 1`
 
 done
-

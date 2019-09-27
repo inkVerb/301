@@ -1,41 +1,32 @@
 #!/bin/sh
 
-# Set the variable
 myChoice=$1
 
-# Case for the number 1
 case $myChoice in
 
 1)
 echo "You chose a number. It is: one ($myChoice)"
 ;;
 
-
-# Case for the number 2
 2)
 echo "You chose a number. It is: two ($myChoice)"
 ;;
 
-
-# Case for the number 3
 3)
 echo "You chose a number. It is: three ($myChoice)"
 ;;
 
 
-# Case for the letter A
 a)
 echo "You chose a letter. It is: A ($myChoice)"
 ;;
 
 
-# Case for the letter B
 b)
 echo "You chose a letter. It is: B ($myChoice)"
 ;;
 
 
-# Case for the letter C
 c)
 echo "You chose a letter. It is: C ($myChoice)"
 ;;

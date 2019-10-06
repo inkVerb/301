@@ -10,4 +10,4 @@ exec 2>> exit-2.log
 echo  "Hey there! I'm exiting TWO!" >&2
 
 # Create an error for "exit 2" ( 2> )
-ls dumbo
+ls bozo

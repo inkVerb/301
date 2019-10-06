@@ -16,8 +16,8 @@ ls
 echo "ls was successful"
 
 # Run ls for a dir that doesn't exist so it will create an STDERR and exit
-ls dumbo
+ls bozo
 
-# This message will not display because the script just exited from the "ls dumbo" error
-echo "ls dumbo was successful"
+# This message will not display because the script just exited from the "ls bozo" error
+echo "ls bozo was successful"
 

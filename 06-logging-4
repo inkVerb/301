@@ -7,6 +7,6 @@ set -o errexit
 exec 3>> exit-3.log
 
 # Create a message upon "exit 3" ( 3> )
-echo  "Hey there! I'm exiting THREE!" >&3
+echo "Hey there! I'm exiting THREE!" >&3
 
 exit 3

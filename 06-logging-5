@@ -3,11 +3,11 @@
 # To make custom error messages, we need this, not "set -e"
 set -o errexit
 
-# Log "exit 3" output in "exit-3.log"
+# Log "exit 2" output in "exit-2.log"
 exec 2>> exit-2.log
 
-# Create a message upon "exit 3" ( 3> )
-echo  "Hey there! I'm exiting TWO!" >&2
+# Create a message upon "exit 2" ( 2> )
+echo "Hey there! I'm exiting TWO!" >&2
 
 # Create an error for "exit 2" ( 2> )
 ls bozo

@@ -43,16 +43,23 @@ read -p "Enter the type now
 
 done
 
+# Show a message acknowledging the type
 # if test: type
+## f
 if [ "${checkTYPE}" = "f" ]; then
 echo "File, got it."; fi
 
+## d
 if [ "${checkTYPE}" = "d" ]; then
 echo "Directory, got it."; fi
 
+## e
 if [ "${checkTYPE}" = "e" ]; then
 echo "Everything, got it."; fi
 
+
+# Wait one second before doing the actual check
+sleep 1
 
 # if test: whether it exists at all
 if [ ! -e "${checkTHIS}" ]; then
@@ -83,7 +90,7 @@ elif [ "${checkTYPE}" = "d" ]; then
 
 ## everything exists
 elif [ "${checkTYPE}" = "e" ]; then
- if [ -f "${checkTHIS}" ]; then
+ if [ -e "${checkTHIS}" ]; then
  echo "Yes, ${checkTHIS} exists."
  fi
 

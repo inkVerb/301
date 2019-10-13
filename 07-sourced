@@ -1,3 +1,4 @@
+echo "---SOURCE---"
 echo "Hello, I'm included."
 
 echo "Code and setting variables all show up from the \"included\" file."
@@ -6,3 +7,4 @@ echo "Code and setting variables all show up from the \"included\" file."
 var56="Llama time!"
 
 echo "\"$var56\" should appear below:"
+echo "^^^SOURCE^^^"

@@ -2,5 +2,4 @@
 
 INPT=$1
 
-echo "\"$INPT\" has ${#INPT} characters."
-
+echo "\"${INPT}\" has ${#INPT} characters."

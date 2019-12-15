@@ -4,7 +4,6 @@ INPTNAME=$1
 DATENAME="$(date +%Y-%m-%d_%H-%M-%S)"
 PWGNNAME="$(pwgen -1 9)"
 
-touch ${INPTNAME}$(date +%Y-%m-%d_%H-%M-%S)_$(pwgen -1 9)
+touch ${INPTNAME}${DATENAME}_${PWGNNAME}
 
-echo "The file \"${INPTNAME}$(date +%Y-%m-%d_%H-%M-%S)_$(pwgen -1 9)\" has been created."
-
+echo "The file \"${INPTNAME}${DATENAME}_${PWGNNAME}\" has been created."

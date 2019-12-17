@@ -1,9 +1,7 @@
 #!/bin/bash
 
 inputVariable="$1"
-WORD=Variable
-scriptVariable="input${WORD}" #so scriptVariable="inputVariable"
-# ${WORD} = "Variable", so "input${WORD}" = "inputVariable"
+WORD=Variable # $WORD = "Variable", so "input$WORD" = "inputVariable"
+scriptVariable="input$WORD" #so scriptVariable="inputVariable"
 
-echo "$1		$scriptVariable		${!scriptVariable}"
-
+echo "$inputVariable		$scriptVariable		${!scriptVariable}"

@@ -24,14 +24,14 @@ if [ -z $1 ]; then
 fi
 
 # Set the options as a variable
-myOptions=`getopt -o a:bcdeh -l alpha:,beetle,charlie,delta,ecko,help -n "$(basename "$0")" -- "$@"`
+myOptions=$(getopt -o a:bcdeh -l alpha:,beetle,charlie,delta,ecko,help -n "$(basename "$0")" -- "$@")
 #Alternative way to do the same thing
 #myOptions=$(getopt --options a:bcdeh --longoptions :alpha:,beetle,charlie,delta,ecko,help --name "$(basename "$0")" -- "$@")
 
 # Run and check the options
 eval set --"$myOptions"
 
-# Set the OPTIND variable in case it is different 
+# Set the OPTIND variable in case it is different
 OPTIND=1
 
 # Set the variables to false
@@ -116,4 +116,3 @@ fi
 if [ $ecko = true ]; then
    echo "Work option E"
 fi
-

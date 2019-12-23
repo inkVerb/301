@@ -1,21 +1,5 @@
 #!/bin/bash
 
-# Create a help or "How to use" message function
-function how_to_use()
-{
- echo " How to use:
- $0 -a <option> -b <option> -c <option> -d <option>
- $0 -h ...will show this message."
-}
-
-# If no option is used
-eval "GLOBALARG=\${${OPTIND}}"
-if [ -z "${GLOBALARG}" ]; then
- echo "You didn't set any options!"
- how_to_use
- exit 1
-fi
-
 # Get and run the options
 while getopts ":a:b:c:d:h" flg; do
  case $flg in
@@ -36,24 +20,24 @@ while getopts ":a:b:c:d:h" flg; do
    echo "Work with $OPTARG using flag -$flg"
   ;;
 
-# Call our "How to use" function
-## If used the -h option
+## Help
   h)
    echo "Great! You asked for help."
-   how_to_use
+   echo " How to use:
+ $0 -a <option> -b <option> -c <option> -d <option>
+ $0 -h ...will show this message."
    exit 0
   ;;
 
-## If a wrong option is used
+## If a wrong option is input
   *)
    echo "Wrong."
-   how_to_use
+   echo " How to use:
+ $0 -a <option> -b <option> -c <option> -d <option>
+ $0 -h ...will show this message."
    exit 1
   ;;
 
  esac
 done
-
-#Clear $OPTIND from this getopts() function, just in case it is used later in this script
-shift "$((OPTIND-1))"
 

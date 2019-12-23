@@ -1,18 +1,18 @@
 #!/bin/bash
 
 # Evaluate proper flags
-while getopts ":abcdh" flg; do
+while getopts ":a:bcde:h" flg; do
  case $flg in
 ## Do nothing for valid flags
-  abcd)
+  abcde)
    :
   ;;
 
-## If a wrong option is input
+## Error for invalid flags
   \?)
    echo "You used an invalid flag: -${OPTARG}" >&2
    echo " How to use:
- $0 -a|b|c|d <option>
+ $0 -a <option> -b|c|d <option>
  $0 -h ...will show this message."
    exit 1
   ;;
@@ -21,20 +21,19 @@ while getopts ":abcdh" flg; do
   h)
    echo "You asked for help!"
    echo " How to use:
- $0 -a|b|c|d <option>
+ $0 -a <option> -b|c|d <option>
  $0 -h ...will show this message."
    exit 0
   ;;
  esac
 done
 
-# Create $GLOBALARG
+# If no option is used
 eval "GLOBALARG=\${${OPTIND}}"
-# If no argument input
 if [ -z "${GLOBALARG}" ]; then
  echo "You didn't set any options!"
  echo " How to use:
- $0 -a|b|c|d <option>
+ $0 -a <option> -b|c|d <option>
  $0 -h ...will show this message."
  exit 1
 fi
@@ -43,23 +42,42 @@ fi
 OPTIND=1
 
 # Get and run the options
-while getopts ":abcd" flg; do
+while getopts ":a:bcde:h" flg; do
  case $flg in
 
   a)
-   echo "Work option A with $GLOBALARG using flag -$flg"
+   echo "Work option A with $OPTARG"
   ;;
 
   b)
-   echo "Work option B with $GLOBALARG using flag -$flg"
+   echo "Work option B with $GLOBALARG"
   ;;
 
   c)
-   echo "Work option C with $GLOBALARG using flag -$flg"
+   echo "Work option C with $GLOBALARG"
   ;;
 
   d)
-   echo "Work option D with $GLOBALARG using flag -$flg"
+   echo "Work option D with $GLOBALARG"
+  ;;
+
+  e)
+   echo "Work option E with $OPTARG"
+  ;;
+
+  h)
+   echo "You Asked for help!"
+   echo " How to use:
+ $0 -a <option> -b|c|d <option>
+ $0 -h ...will show this message."
+   exit 0
+  ;;
+## If a wrong option is input
+  *)
+   echo " How to use:
+ $0 -a <option> -b|c|d <option>
+ $0 -h ...will show this message."
+   exit 1
   ;;
 
  esac
@@ -67,3 +85,4 @@ done
 
 #Clear $OPTIND from this getopts() function, just in case it is used later in this script
 shift "$((OPTIND-1))"
+

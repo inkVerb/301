@@ -1,78 +1,43 @@
 #!/bin/bash
 
-# Create a help or "How to use" message function
-function how_to_use()
-{
- echo " How to use:
- $0 -a|b|c|d <option>
- $0 -h ...will show this message."
-}
-
-# Evaluate proper flags
+# Get and run the options
 while getopts ":abcdh" flg; do
  case $flg in
-## Do nothing for valid flags
-  abcd)
-   :
+
+  a)
+   echo "Work option A with flag -$flg"
   ;;
 
-## Error for invalid flags
-  \?)
-   echo "You used an invalid flag: -${OPTARG}" >&2
-   how_to_use
-   exit 1
+  b)
+   echo "Work option B with flag -$flg"
+  ;;
+
+  c)
+   echo "Work option C with flag -$flg"
+  ;;
+
+  d)
+   echo "Work option D with $OPTARG and flag -$flg"
   ;;
 
 ## Help
   h)
    echo "You asked for help!"
-   how_to_use
+   echo " How to use:
+ $0 -a|b|c|d <option>
+ $0 -h ...will show this message."
    exit 0
   ;;
- esac
-done
 
-## If no option is used
-eval "GLOBALARG=\${${OPTIND}}"
-if [ -z "${GLOBALARG}" ]; then
- echo "You didn't set any options!"
- how_to_use
- exit 1
-fi
-
-# Set the OPTIND variable in case it is different 
-OPTIND=1
-
-# Get and run the options
-while getopts ":abcd" flg; do
- case $flg in
-
-  a)
-   echo "Work option A with $GLOBALARG using flag -$flg"
-   ;;
-
-  b)
-   echo "Work option B with $GLOBALARG using flag -$flg"
-   ;;
-
-  c)
-   echo "Work option C with $GLOBALARG using flag -$flg"
-   ;;
-
-  d)
-   echo "Work option D with $GLOBALARG using flag -$flg"
-   ;;
-
-## If a wrong option is used
+## If a wrong option is input
   *)
    echo "Wrong."
-   how_to_use
+   echo " How to use:
+ $0 -a|b|c|d <option>
+ $0 -h ...will show this message."
    exit 1
   ;;
 
-
  esac
 done
 
-#Clear $OPTIND from this getopts() function, just in case it is used later in this script
-shift "$((OPTIND-1))"

@@ -1,10 +1,7 @@
 #!/bin/sh
 
-# Make sure LibreOffice is not running
-killall soffice.bin
-
 # Start LibreOffice Writer with '&' so the terminal returns to the prompt
-lowriter &
+lowriter
 
 # Echo to show the script has moved on
-echo "The script has moved on, even though the previous process is running."
+echo "You didn't see this message until closing the Writer window in the GUI."

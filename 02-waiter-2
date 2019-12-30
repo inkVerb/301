@@ -1,17 +1,7 @@
 #!/bin/sh
 
-# Make sure LibreOffice is not running
-killall soffice.bin
-
-# Start LibreOffice Writer, then wait
+# Start LibreOffice Writer with '&' so the terminal returns to the prompt
 lowriter &
-wait
 
-# Echo once the script is finished
-echo "You closed Writer, let's run it again, but use 'wait' on the same line using: '; wait'"
-
-# Start LibreOffice Writer again
-lowriter; wait
-
-# Echo the final message
-echo "Finally, we're done."
+# Echo to show the script has moved on
+echo "The script has moved on, even though the previous process is running."

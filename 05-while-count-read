@@ -33,6 +33,6 @@ echo ${thisCount}
 sleep 1
 
 # add 1
-thisCount=`expr ${thisCount} + 1`
+thisCount=$(expr ${thisCount} + 1)
 
 done

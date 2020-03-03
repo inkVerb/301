@@ -3,9 +3,9 @@
 echo -n "Do you agree? [yes or no]: "
 while :
 do
- read YESNO
+ read YesNo
 
- case $YESNO in
+ case $YesNo in
 
   [yY]|[yY][eE][sS])
    echo "You agree."

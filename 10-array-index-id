@@ -1,5 +1,5 @@
 #!/bin/bash
 
-KEY=$1
+Key=$1
 myArray=(one two three)
-echo ${myArray[$KEY]}
+echo ${myArray[$Key]}

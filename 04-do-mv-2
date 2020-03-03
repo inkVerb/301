@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for VAR in *T-ONE; do
-mv $VAR "${VAR%T-ONE}t.one"
+for Var in *T-ONE; do
+mv $Var "${Var%T-ONE}t.one"
 
 done

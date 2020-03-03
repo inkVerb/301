@@ -10,15 +10,15 @@ function how_to_use()
 
 
 # Get and run the options
-while getopts ":a:b:h" flg; do
- case $flg in
+while getopts ":a:b:h" Flg; do
+ case $Flg in
 
   a)
-   echo "Work with $OPTARG using flag -$flg"
+   echo "Work with $OPTARG using flag -$Flg"
   ;;
 
-  b) 
-   echo "Work with $OPTARG using flag -$flg"
+  b)
+   echo "Work with $OPTARG using flag -$Flg"
   ;;
 
 ## Help
@@ -37,4 +37,3 @@ while getopts ":a:b:h" flg; do
 
  esac
 done
-

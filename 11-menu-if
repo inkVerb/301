@@ -1,14 +1,14 @@
 #!/bin/bash
 
-select input in Hi Yo-yo Quit; do
+select Input in Hi Yo-yo Quit; do
 
- if [ "$input" = "Hi" ]; then
+ if [ "$Input" = "Hi" ]; then
   echo "Hi back at ya!"
 
- elif [ "$input" = "Yo-yo" ]; then
+ elif [ "$Input" = "Yo-yo" ]; then
   echo "It goes up and down."
 
- elif [ "$input" = "Quit" ]; then
+ elif [ "$Input" = "Quit" ]; then
   echo "Quitting."
   break
 
@@ -17,4 +17,3 @@ select input in Hi Yo-yo Quit; do
 
  fi
 done
-

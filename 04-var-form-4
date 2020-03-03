@@ -1,5 +1,5 @@
 #!/bin/sh
 
-variable=$1
+Variable=$1
 
-echo ${variable%food}
+echo ${Variable%food}

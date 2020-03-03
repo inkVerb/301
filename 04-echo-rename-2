@@ -1,5 +1,5 @@
 #!/bin/sh
 
-for VAR in *t.one; do
-echo "${VAR%t.one}T-ONE  <-- $VAR"
+for Var in *t.one; do
+echo "${Var%t.one}T-ONE  <-- $Var"
 done

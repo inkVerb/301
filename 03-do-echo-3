@@ -1,8 +1,8 @@
 #!/bin/sh
 
-for VAR in *.one; do
+for Var in *.one; do
 
-echo "$VAR"
+echo "$Var"
 sleep 1
 
 done

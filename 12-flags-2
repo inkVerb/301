@@ -1,23 +1,23 @@
 #!/bin/bash
 
 # Get and run the options
-while getopts ":abcdh" flg; do
- case $flg in
+while getopts ":abcdh" Flg; do
+ case $Flg in
 
   a)
-   echo "Work option A with flag -$flg"
+   echo "Work option A with flag -$Flg"
   ;;
 
   b)
-   echo "Work option B with flag -$flg"
+   echo "Work option B with flag -$Flg"
   ;;
 
   c)
-   echo "Work option C with flag -$flg"
+   echo "Work option C with flag -$Flg"
   ;;
 
   d)
-   echo "Work option D with $OPTARG and flag -$flg"
+   echo "Work option D with $OPTARG and flag -$Flg"
   ;;
 
 ## Help
@@ -40,4 +40,3 @@ while getopts ":abcdh" flg; do
 
  esac
 done
-

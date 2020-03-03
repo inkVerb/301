@@ -1,5 +1,5 @@
 #!/bin/sh
 
-for FNM in *.odt; do
-odt2txt $FNM > ${FNM%odt}txt
+for FileName in *.odt; do
+odt2txt $FileName > ${FileName%odt}txt
 done

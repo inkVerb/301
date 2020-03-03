@@ -1,10 +1,10 @@
 #!/bin/sh
 
-for VAR in one-1*
+for Var in one-1*
 
 do
 
-echo "$VAR"
+echo "$Var"
 sleep 1
 
 done

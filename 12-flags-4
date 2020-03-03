@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Evaluate proper flags
-while getopts ":a:bcde:h" flg; do
- case $flg in
+while getopts ":a:bcde:h" Flg; do
+ case $Flg in
 ## Do nothing for valid flags
   abcde)
    :
@@ -29,8 +29,8 @@ while getopts ":a:bcde:h" flg; do
 done
 
 # If no option is used
-eval "GLOBALARG=\${${OPTIND}}"
-if [ -z "${GLOBALARG}" ]; then
+eval "globalArg=\${${OPTIND}}"
+if [ -z "${globalArg}" ]; then
  echo "You didn't set any options!"
  echo " How to use:
  $0 -a <option> -b|c|d <option>
@@ -38,27 +38,27 @@ if [ -z "${GLOBALARG}" ]; then
  exit 1
 fi
 
-# Set the OPTIND variable in case it is different 
+# Set the OPTIND variable in case it is different
 OPTIND=1
 
 # Get and run the options
-while getopts ":a:bcde:h" flg; do
- case $flg in
+while getopts ":a:bcde:h" Flg; do
+ case $Flg in
 
   a)
    echo "Work option A with $OPTARG"
   ;;
 
   b)
-   echo "Work option B with $GLOBALARG"
+   echo "Work option B with $globalArg"
   ;;
 
   c)
-   echo "Work option C with $GLOBALARG"
+   echo "Work option C with $globalArg"
   ;;
 
   d)
-   echo "Work option D with $GLOBALARG"
+   echo "Work option D with $globalArg"
   ;;
 
   e)
@@ -85,4 +85,3 @@ done
 
 #Clear $OPTIND from this getopts() function, just in case it is used later in this script
 shift "$((OPTIND-1))"
-

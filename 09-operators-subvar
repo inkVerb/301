@@ -1,19 +1,18 @@
 #!/bin/sh
 
-INPT1=$1
-INPT2=$2
-OPERT=$3
+input1=$1
+input2=$2
+Opertr=$3
 
-
-case $OPERT in 
+case $Opertr in
 
 # -eq EQual to
 eq)
 
- if [ "$INPT1" -$OPERT "$INPT2" ]; then
- echo "$INPT1 & $INPT2 are equal."
+ if [ "$input1" -$Opertr "$input2" ]; then
+ echo "$input1 & $input2 are equal."
  else
- echo "$INPT1 & $INPT2 are not equal."
+ echo "$input1 & $input2 are not equal."
  fi
 
 ;;
@@ -21,10 +20,10 @@ eq)
 # -ne Not Equal to
 ne)
 
- if [ "$INPT1" -$OPERT "$INPT2" ]; then
- echo "$INPT1 & $INPT2 are not equal."
+ if [ "$input1" -$Opertr "$input2" ]; then
+ echo "$input1 & $input2 are not equal."
  else
- echo "$INPT1 & $INPT2 are equal."
+ echo "$input1 & $input2 are equal."
  fi
 
 ;;
@@ -32,10 +31,10 @@ ne)
 # -gt Greater Than
 gt)
 
- if [ "$INPT1" -$OPERT "$INPT2" ]; then
- echo "$INPT1 is greater than $INPT2."
+ if [ "$input1" -$Opertr "$input2" ]; then
+ echo "$input1 is greater than $input2."
  else
- echo "$INPT1 is not greater than $INPT2."
+ echo "$input1 is not greater than $input2."
  fi
 
 ;;
@@ -43,10 +42,10 @@ gt)
 # -lt Less Than
 lt)
 
- if [ "$INPT1" -$OPERT "$INPT2" ]; then
- echo "$INPT1 is less than $INPT2."
+ if [ "$input1" -$Opertr "$input2" ]; then
+ echo "$input1 is less than $input2."
  else
- echo "$INPT1 is not less than $INPT2."
+ echo "$input1 is not less than $input2."
  fi
 
 ;;
@@ -54,10 +53,10 @@ lt)
 # -ge Greater than or Eauql to
 ge)
 
- if [ "$INPT1" -$OPERT "$INPT2" ]; then
- echo "$INPT1 is greater than or equal to $INPT2."
+ if [ "$input1" -$Opertr "$input2" ]; then
+ echo "$input1 is greater than or equal to $input2."
  else
- echo "$INPT1 is not greater than or equal to $INPT2."
+ echo "$input1 is not greater than or equal to $input2."
  fi
 
 ;;
@@ -65,13 +64,12 @@ ge)
 # -le Less than or Equal to
 le)
 
- if [ "$INPT1" -$OPERT "$INPT2" ]; then
- echo "$INPT1 is less than or equal to $INPT2."
+ if [ "$input1" -$Opertr "$input2" ]; then
+ echo "$input1 is less than or equal to $input2."
  else
- echo "$INPT1 is not less than or equal to $INPT2."
+ echo "$input1 is not less than or equal to $input2."
  fi
 
 ;;
 
 esac
-

@@ -1,13 +1,13 @@
 #!/bin/sh
 
-for VAR in one-*; do
+for Var in one-*; do
 
-echo "$VAR here"
+echo "$Var here"
 
- if [ "$VAR" = "one-3" ]; then
+ if [ "$Var" = "one-3" ]; then
   break
  fi
 
-echo "$VAR ----there"
+echo "$Var ----there"
 
 done

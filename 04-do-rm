@@ -1,5 +1,5 @@
 #!/bin/sh
 
-for VAR in *THREE*; do
-rm $VAR
+for Var in *THREE*; do
+rm $Var
 done

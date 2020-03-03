@@ -1,43 +1,43 @@
 #!/bin/sh
 
-INPT1=$1
-OPERT=$2
-INPT2=$3
+input1=$1
+Opertr=$2
+input2=$3
 
-case $OPERT in 
+case $Opertr in
 
 # + Plus
 +)
 
- echo "$INPT1 + $INPT2 = $(expr $INPT1 + $INPT2)"
+ echo "$input1 + $input2 = $(expr $input1 + $input2)"
 
 ;;
 
 # - Minus
 -)
 
- echo "$INPT1 - $INPT2 = $(expr $INPT1 - $INPT2)"
+ echo "$input1 - $input2 = $(expr $input1 - $input2)"
 
 ;;
 
 # \* Multiplied by
 \*)
 
- echo "$INPT1 * $INPT2 = $(expr $INPT1 \* $INPT2)"
+ echo "$input1 * $input2 = $(expr $input1 \* $input2)"
 
 ;;
 
 # / Divided by
 /)
 
- echo "$INPT1 / $INPT2 = $(expr $INPT1 / $INPT2)"
+ echo "$input1 / $input2 = $(expr $input1 / $input2)"
 
 ;;
 
 # % Modulus (remainder after divided)
 %)
 
- echo "$INPT1 % $INPT2 = $(expr $INPT1 % $INPT2)"
+ echo "$input1 % $input2 = $(expr $input1 % $input2)"
 
 ;;
 

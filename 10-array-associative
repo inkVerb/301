@@ -1,7 +1,7 @@
 #!/bin/bash
 
-KEY1=$1
-KEY2=$2
+Key1=$1
+Key2=$2
 
 declare -A myArray
 myArray[i]=one
@@ -9,7 +9,7 @@ myArray[ii]=two
 myArray[iii]=three
 myArray[iv]=four
 myArray[v]=five
-echo ${myArray[$KEY1]}
+echo ${myArray[$Key1]}
 
 # Quit here if no second variable
 if [ -z "$2" ]; then
@@ -17,4 +17,4 @@ exit 0; fi
 
 declare -A myArrayWik
 myArrayWik=([I]=ONE [II]=TWO [III]=THREE [IV]=FOUR [V]=FIVE)
-echo ${myArrayWik[$KEY2]}
+echo ${myArrayWik[$Key2]}

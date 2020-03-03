@@ -1,15 +1,15 @@
 #!/bin/bash
 
-OPTNS="Hi Yo-yo Quit"
-select input in $OPTNS; do
+Optns="Hi Yo-yo Quit"
+select Input in $Optns; do
 
- if [ "$input" = "Hi" ]; then
+ if [ "$Input" = "Hi" ]; then
   echo "Hi back at ya!"
 
- elif [ "$input" = "Yo-yo" ]; then
+ elif [ "$Input" = "Yo-yo" ]; then
   echo "It goes up and down."
 
- elif [ "$input" = "Quit" ]; then
+ elif [ "$Input" = "Quit" ]; then
   echo "Quitting."
   break
 
@@ -18,4 +18,3 @@ select input in $OPTNS; do
 
  fi
 done
-

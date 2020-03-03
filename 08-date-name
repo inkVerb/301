@@ -1,9 +1,9 @@
 #!/bin/sh
 
-INPTNAME=$1
-DATENAME="$(date +%Y-%m-%d_%H-%M-%S)"
-PWGNNAME="$(pwgen -1 9)"
+inptName=$1
+dateName="$(date +%Y-%m-%d_%H-%M-%S)"
+pwgnName="$(pwgen -1 9)"
 
-touch ${INPTNAME}${DATENAME}_${PWGNNAME}
+touch ${inptName}${dateName}_${pwgnName}
 
-echo "The file \"${INPTNAME}${DATENAME}_${PWGNNAME}\" has been created."
+echo "The file \"${inptName}${dateName}_${pwgnName}\" has been created."

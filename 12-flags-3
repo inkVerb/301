@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Evaluate proper flags
-while getopts ":abcdh" flg; do
- case $flg in
+while getopts ":abcdh" Flg; do
+ case $Flg in
 ## Do nothing for valid flags
   abcd)
    :
@@ -28,10 +28,10 @@ while getopts ":abcdh" flg; do
  esac
 done
 
-# Create $GLOBALARG
-eval "GLOBALARG=\${${OPTIND}}"
+# Create $globalArg
+eval "globalArg=\${${OPTIND}}"
 # If no argument input
-if [ -z "${GLOBALARG}" ]; then
+if [ -z "${globalArg}" ]; then
  echo "You didn't set any options!"
  echo " How to use:
  $0 -a|b|c|d <option>
@@ -39,27 +39,27 @@ if [ -z "${GLOBALARG}" ]; then
  exit 1
 fi
 
-# Set the OPTIND variable in case it is different 
+# Set the OPTIND variable in case it is different
 OPTIND=1
 
 # Get and run the options
-while getopts ":abcd" flg; do
- case $flg in
+while getopts ":abcd" Flg; do
+ case $Flg in
 
   a)
-   echo "Work option A with $GLOBALARG using flag -$flg"
+   echo "Work option A with $globalArg using flag -$Flg"
   ;;
 
   b)
-   echo "Work option B with $GLOBALARG using flag -$flg"
+   echo "Work option B with $globalArg using flag -$Flg"
   ;;
 
   c)
-   echo "Work option C with $GLOBALARG using flag -$flg"
+   echo "Work option C with $globalArg using flag -$Flg"
   ;;
 
   d)
-   echo "Work option D with $GLOBALARG using flag -$flg"
+   echo "Work option D with $globalArg using flag -$Flg"
   ;;
 
  esac

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-INPT=$1
+input=$1
 
-echo "\"${INPT}\" has ${#INPT} characters."
+echo "\"${input}\" has ${#input} characters."

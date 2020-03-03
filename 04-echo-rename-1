@@ -1,5 +1,5 @@
 #!/bin/sh
 
-for VAR in *.one; do
-echo "${VAR%one}two was $VAR"
+for Var in *.one; do
+echo "${Var%one}two was $Var"
 done

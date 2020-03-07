@@ -1,0 +1,13 @@
+#!/bin/bash
+
+declare -A myArray
+myArray[i]=one
+myArray[ii]=two
+myArray[iii]=three
+myArray[iv]=four
+myArray[v]=five
+
+for Var in ${myArray[@]}
+do
+echo $Var
+done

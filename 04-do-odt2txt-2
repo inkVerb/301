@@ -1,5 +1,0 @@
-#!/bin/sh
-
-for FileName in *.odt; do
-odt2txt $FileName | cat > ${FileName%odt}txt
-done

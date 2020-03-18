@@ -4,10 +4,10 @@ if [ -d $1 ]
 
 then
 
-echo "Deal."
+echo "The directory exists."
 
 else
 
-echo "Sorry, Bucko! No deal."
+echo "The directory does not exist."
 
 fi

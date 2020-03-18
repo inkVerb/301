@@ -14,6 +14,6 @@ echo "I see it. It goes up and down."
 
 else
 
-echo "Blinded by science! $1"
+echo "Blinded by science: $1!"
 
 fi

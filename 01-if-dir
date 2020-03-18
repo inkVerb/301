@@ -4,6 +4,6 @@ if [ -d $1 ]
 
 then
 
-echo "Yes."
+echo "The directory exists."
 
 fi

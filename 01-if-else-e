@@ -4,10 +4,10 @@ if [ -e $1 ]
 
 then
 
-echo "It's alive!"
+echo "It exists."
 
 else
 
-echo "Too far from Federation space."
+echo "It does not exist."
 
 fi

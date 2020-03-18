@@ -4,6 +4,6 @@ if [ -f $1 ]
 
 then
 
-echo "Yes."
+echo "The file exists."
 
 fi

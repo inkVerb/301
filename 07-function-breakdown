@@ -13,3 +13,7 @@ echo "That's why I like $varOne and $varTwo!"
 }
 
 functionName apples strawberries
+
+echo "varOne = $varOne"
+echo "varTwo = $varTwo"
+echo "myVariable = $myVariable"

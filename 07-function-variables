@@ -6,33 +6,46 @@ varGlobalTwo=$2
 
 functionName() {
 
+varGlobalFunctThree=$3
+varGlobalFunctFour="iAmGlobalFOUR"
+
 local varLocalOne=$1
 local varLocalTwo=$2
+local varLocalThree=$3
+local varLocalFour="iAmLocalFOUR"
 
 echo "\"global\" variables used inside the function:
 
 varGlobalOne = $varGlobalOne
 varGlobalTwo = $varGlobalTwo
+varGlobalFunctThree = $varGlobalFunctThree
+varGlobalFunctFour = $varGlobalFunctFour
 
 \"local\" variables used inside the function:
 
 varLocalOne = $varLocalOne
 varLocalTwo = $varLocalTwo
+varLocalThree = $varLocalThree
+varLocalFour = $varLocalFour
 "
 
 }
 
 echo "First, run the function..."
 
-functionName $varGlobalOne $varGlobalTwo
+functionName $varGlobalOne $varGlobalTwo functArgTHREE
 
 echo "\"global\" variables used outside the function:
 
 varGlobalOne = $varGlobalOne
 varGlobalTwo = $varGlobalTwo
+varGlobalFunctThree = $varGlobalFunctThree
+varGlobalFunctFour = $varGlobalFunctFour
 
 \"local\" variables used outside the function:
 
 varLocalOne = $varLocalOne
 varLocalTwo = $varLocalTwo
+varLocalThree = $varLocalThree
+varLocalFour = $varLocalFour
 "

@@ -1,8 +1,8 @@
 #!/bin/sh
 
 input1=$1
-input2=$2
-Opertr=$3
+Opertr=$2
+input2=$3
 
 case $Opertr in
 

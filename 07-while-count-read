@@ -48,4 +48,4 @@ echo "And wait for it..."
 sleep 2
 echo "${thisCount}"
 sleep 1
-echo "BLAM! BLAM! She's in the water!"
+echo "BLAM! BLAM!"

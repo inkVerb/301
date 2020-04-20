@@ -15,6 +15,5 @@ echo ${myArray[$Key1]}
 if [ -z "$2" ]; then
 exit 0; fi
 
-declare -A myArrayWik
-myArrayWik=([I]=ONE [II]=TWO [III]=THREE [IV]=FOUR [V]=FIVE)
-echo ${myArrayWik[$Key2]}
+myArray=([I]=ONE [II]=TWO [III]=THREE [IV]=FOUR [V]=FIVE)
+echo ${myArray[$Key2]}

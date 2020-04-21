@@ -16,20 +16,16 @@ echo "You chose a number. It is: two ($myChoice)"
 echo "You chose a number. It is: three ($myChoice)"
 ;;
 
-
 a)
 echo "You chose a letter. It is: A ($myChoice)"
 ;;
 
-
 b)
 echo "You chose a letter. It is: B ($myChoice)"
 ;;
-
 
 c)
 echo "You chose a letter. It is: C ($myChoice)"
 ;;
 
 esac
-

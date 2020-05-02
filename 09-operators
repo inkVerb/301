@@ -10,9 +10,9 @@ case $Opertr in
 eq)
 
  if [ "$input1" -eq "$input2" ]; then
- echo "$input1 & $input2 are equal."
+ echo "Yes, $input1 & $input2 are equal."
  else
- echo "$input1 & $input2 are not equal."
+ echo "No, $input1 & $input2 are not equal."
  fi
 
 ;;
@@ -21,9 +21,9 @@ eq)
 ne)
 
  if [ "$input1" -ne "$input2" ]; then
- echo "$input1 & $input2 are not equal."
+ echo "Yes, $input1 & $input2 are not equal."
  else
- echo "$input1 & $input2 are equal."
+ echo "No, $input1 & $input2 are equal."
  fi
 
 ;;
@@ -32,9 +32,9 @@ ne)
 gt)
 
  if [ "$input1" -gt "$input2" ]; then
- echo "$input1 is greater than $input2."
+ echo "Yes, $input1 is greater than $input2."
  else
- echo "$input1 is not greater than $input2."
+ echo "No, $input1 is not greater than $input2."
  fi
 
 ;;
@@ -43,9 +43,9 @@ gt)
 lt)
 
  if [ "$input1" -lt "$input2" ]; then
- echo "$input1 is less than $input2."
+ echo "Yes, $input1 is less than $input2."
  else
- echo "$input1 is not less than $input2."
+ echo "No, $input1 is not less than $input2."
  fi
 
 ;;
@@ -54,9 +54,9 @@ lt)
 ge)
 
  if [ "$input1" -ge "$input2" ]; then
- echo "$input1 is greater than or equal to $input2."
+ echo "Yes, $input1 is greater than or equal to $input2."
  else
- echo "$input1 is not greater than or equal to $input2."
+ echo "No, $input1 is not greater than or equal to $input2."
  fi
 
 ;;
@@ -65,9 +65,9 @@ ge)
 le)
 
  if [ "$input1" -le "$input2" ]; then
- echo "$input1 is less than or equal to $input2."
+ echo "Yes, $input1 is less than or equal to $input2."
  else
- echo "$input1 is not less than or equal to $input2."
+ echo "No, $input1 is not less than or equal to $input2."
  fi
 
 ;;

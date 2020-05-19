@@ -28,8 +28,9 @@ while getopts ":a:bcde:h" Flg; do
  esac
 done
 
-# If no option is used
+# Create $globalArg
 eval "globalArg=\${${OPTIND}}"
+# If no argument input
 if [ -z "${globalArg}" ]; then
  echo "You didn't set any options!"
  echo " How to use:

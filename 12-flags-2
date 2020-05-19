@@ -31,7 +31,7 @@ while getopts ":abcdh" Flg; do
 
 ## If a wrong option is input
   *)
-   echo "Wrong."
+   echo "Wrong..."
    echo " How to use:
  $0 -a|b|c|d <option>
  $0 -h ...will show this message."

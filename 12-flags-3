@@ -8,7 +8,7 @@ while getopts ":abcdh" Flg; do
    :
   ;;
 
-## If a wrong option is input
+## Error for invalid flags
   \?)
    echo "You used an invalid flag: -${OPTARG}" >&2
    echo " How to use:

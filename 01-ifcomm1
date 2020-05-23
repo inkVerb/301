@@ -1,0 +1,12 @@
+#!/bin/sh
+if grep "markdown" markdown.md; then
+  echo "Yes: markdown"
+else
+  echo "No: markdown"
+fi
+
+if grep "Markdown" markdown.md; then
+  echo "Yes: Markdown"
+else
+  echo "No: Markdown"
+fi

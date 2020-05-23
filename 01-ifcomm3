@@ -1,0 +1,18 @@
+#!/bin/sh
+if echo "I am here"; then
+  echo "Yes, I was there"
+else
+  echo "No, I was not there"
+fi
+
+if ls markdown.md; then
+  echo "Yes, markdown.md is here"
+else
+  echo "No, markdown.md is not here"
+fi
+
+if ls nothere.md; then
+  echo "Yes, nothere.md is here"
+else
+  echo "No, nothere.md is not here"
+fi

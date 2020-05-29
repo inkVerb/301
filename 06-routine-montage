@@ -21,10 +21,10 @@ fi
 
 # Check exit 2
 ls bozo
-if [ $? = 0 ]; then
-  echo "yes, ls bozo succeeded, making a log entry..."
+if [ $? = 2 ]; then
+  echo "correct, ls bozo failed, making a log entry..."
   logger -t RoutineCheck -p local0.info "Check ls succeeded."
 else
-  echo "no, ls bozo failed, making a log entry..."
+  echo "wrong, ls bozo succeeded, making a log entry..."
   logger -t RoutineCheck -p local0.info "Check ls failed."
 fi

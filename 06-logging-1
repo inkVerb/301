@@ -1,21 +1,12 @@
 #!/bin/sh
 
-# Make this script exit if there is an STDERR error message
-set -e
-
 # Log all STDERR error messages in "error.log"
 #exec 2> error.log  # Only one ">" would over-write the log file; we want to append the log file, so we use ">>"
 exec 2>> error.log
 
-# Run ls
+# Run ls: success to STDOUT
 ls
 
-# Create a message for STDOUT if there are no errors and thus no early exit
-echo "ls was successful"
-
-# Run ls for a dir that doesn't exist so it will create an STDERR and exit
+# Run ls for a dir that doesn't exist: failure to STDERR
 ls bozo
-
-# This message will not display because the script just exited from the "ls bozo" error
-echo "ls bozo was successful"
 

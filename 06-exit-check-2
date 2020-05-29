@@ -1,0 +1,9 @@
+#!/bin/sh
+
+~/School/VIP/301/06-exit3
+lastExit=$? # We need this as a variable because $? will change after this if test...
+if [ $lastExit = 3 ]; then
+  echo "yes, last exit was $lastExit, but now the code is $? because the test passed"
+else
+  echo "no, last exit was: $lastExit, but now the code is $? because the test failed"
+fi

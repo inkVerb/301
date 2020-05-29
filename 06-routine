@@ -1,0 +1,4 @@
+#!/bin/sh
+
+../06-routine-check
+../06-routine-follow-up

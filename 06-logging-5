@@ -1,13 +1,23 @@
 #!/bin/sh
 
-# To make custom error messages, we need this, not "set -e"
-set -o errexit
+# Make this script exit if there is an STDERR error message
+set -e
 
-# Log "exit 2" output in "exit-2.log"
-exec 2>> exit-2.log
+# Log all normal STDOUT output in "all.log"
+exec 1>> all.log
 
-# Create a message upon "exit 2" ( 2> )
-echo "Hey there! I'm exiting TWO!" >&2
+# Redirect all STDERR ( 2> ) to become STDOUT ( 1> )
+exec 2>&1
 
-# Create an error for "exit 2" ( 2> )
+# Run ls
+ls
+
+# Create a message for STDOUT if there are no errors and thus no early exit
+echo "ls was successful"
+
+# Run ls for a dir that doesn't exist so it will create an STDERR and exit
 ls bozo
+
+# This message will not display because the script just exited from the "ls bozo" error
+echo "ls bozo was successful"
+

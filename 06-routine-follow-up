@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# The script must be in here or it won't check out...
+
+~/School/VIP/301/06-routine-check
+if [ $? = 3 ]; then
+  echo "yes, file-3 was there, making a log entry..."
+  logger -t RoutineCheck -p local0.info "Check found a status three."
+else
+  echo "nothing happened"
+fi

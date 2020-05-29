@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Log channel 0 output in "out-0.log"
+exec 0>> out-0.log
+
+# Create a message going to channel 0 output
+echo "Hey there! I'm also in should-be empty channel ZERO just to be silly!" >&0
+
+# Log channel 1 output in "out-1.log"
+exec 1>> out-1.log
+
+# Create a message going to channel 1 output
+echo "Hey there! I'm also in output channel ONE!" >&1
+
+# Log channel 2 output in "out-2.log"
+exec 2>> out-2.log
+
+# Create a message going to channel 2 output
+echo "Hey there! I'm also in output channel TWO!" >&2
+
+# Log channel 3 output in "out-3.log"
+exec 3>> out-3.log
+
+# Create a message going to channel 3 output
+echo "Hey there! I'm also in output channel THREE!" >&3
+

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Log channel 3 output in "out-3.log"
+exec 3>> out-3.log
+
+# Create a message going to channel 3 output
+echo "Hey there! I'm in output channel THREE!" >&3
+

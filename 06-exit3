@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Do nothing
+
+# exit with status 3
+exit 3

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+lastExit=$?
+if [ $lastExit = 3 ]; then
+  echo "yes, last exit was $lastExit, but now the code is $? because the test passed"
+else
+  echo "no, last exit was: $lastExit, but now the code is $? because the test failed"
+fi

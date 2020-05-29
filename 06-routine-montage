@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Check exit 3
+~/School/VIP/301/06-routine-check
+if [ $? = 3 ]; then
+  echo "yes, file-3 was there, making a log entry..."
+  logger -t RoutineCheck -p local0.info "Check found a status three."
+else
+  echo "nothing happened"
+fi
+
+# Check exit 0
+ls
+if [ $? = 0 ]; then
+  echo "yes, ls succeeded, making a log entry..."
+  logger -t RoutineCheck -p local0.info "Check ls succeeded."
+else
+  echo "no, ls failed, making a log entry..."
+  logger -t RoutineCheck -p local0.info "Check ls failed."
+fi
+
+# Check exit 2
+ls bozo
+if [ $? = 0 ]; then
+  echo "yes, ls bozo succeeded, making a log entry..."
+  logger -t RoutineCheck -p local0.info "Check ls succeeded."
+else
+  echo "no, ls bozo failed, making a log entry..."
+  logger -t RoutineCheck -p local0.info "Check ls failed."
+fi

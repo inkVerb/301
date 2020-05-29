@@ -11,4 +11,3 @@ ls
 
 # Run ls for a dir that doesn't exist: failure to STDERR
 ls bozo
-

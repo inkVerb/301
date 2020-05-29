@@ -5,4 +5,3 @@ exec 2>> out-2.log
 
 # Create a message going to channel 2 output
 echo "Hey there! I'm in output channel TWO!" >&2
-

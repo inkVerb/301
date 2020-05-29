@@ -20,4 +20,3 @@ ls bozo
 
 # This message will not display because the script just exited from the "ls bozo" error
 echo "ls bozo was successful"
-

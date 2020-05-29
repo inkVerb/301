@@ -7,4 +7,3 @@ if [ -f "file-3" ]; then
   echo "file-3 exists at: $timestamp" >&3
   exit 3
 fi
-

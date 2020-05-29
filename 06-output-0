@@ -5,4 +5,3 @@ exec 0>> out-0.log
 
 # Create a message going to channel 0 output
 echo "Hey there! I'm in should-be empty channel ZERO just to be silly!" >&0
-

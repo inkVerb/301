@@ -26,7 +26,7 @@ while getopts ":a:b:c:d:h" Flg; do
    echo " How to use:
  $0 -a <option> -b <option> -c <option> -d <option>
  $0 -h ...will show this message."
-   exit 0
+   exit 1
   ;;
 
 ## If a wrong option is input
@@ -35,7 +35,7 @@ while getopts ":a:b:c:d:h" Flg; do
    echo " How to use:
  $0 -a <option> -b <option> -c <option> -d <option>
  $0 -h ...will show this message."
-   exit 1
+   exit 2
   ;;
 
  esac

@@ -20,7 +20,7 @@ function how_to_use()
 if [ -z $1 ]; then
  echo "You didn't set any options!"
  how_to_use
- exit 1
+ exit 2
 fi
 
 # Set the options as a variable
@@ -79,7 +79,7 @@ while [[ $# > 0 ]]; do
   -h | --help )
    echo "You asked for help!"
    how_to_use
-   exit 0
+   exit 1
   ;;
 
 ## Finally break the loop (this will run 'break' no matter what)

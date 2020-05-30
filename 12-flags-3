@@ -14,7 +14,7 @@ while getopts ":abcdh" Flg; do
    echo " How to use:
  $0 -a|b|c|d <option>
  $0 -h ...will show this message."
-   exit 1
+   exit 2
   ;;
 
 ## Help
@@ -23,7 +23,7 @@ while getopts ":abcdh" Flg; do
    echo " How to use:
  $0 -a|b|c|d <option>
  $0 -h ...will show this message."
-   exit 0
+   exit 1
   ;;
  esac
 done
@@ -36,7 +36,7 @@ if [ -z "${globalArg}" ]; then
  echo " How to use:
  $0 -a|b|c|d <option>
  $0 -h ...will show this message."
- exit 1
+ exit 2
 fi
 
 # Set the OPTIND variable in case it is different

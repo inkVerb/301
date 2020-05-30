@@ -25,14 +25,14 @@ while getopts ":a:b:h" Flg; do
   h)
    echo "Great! You asked for help."
    how_to_use
-   exit 0
+   exit 1
   ;;
 
 ## If a wrong option is input
   *)
    echo "Wrong."
    how_to_use
-   exit 1
+   exit 2
   ;;
 
  esac

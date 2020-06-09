@@ -70,6 +70,13 @@ if [ ! -e "${checkTHIS}" ]; then
 echo "It doesn't exist at all."
 exit 0; fi
 
+# or test: symlink or not?
+if [ -f "${checkTHIS}" ] || [ -d "${checkTHIS}" ]; then
+  echo "We know ${checkTHIS} is not a symlink..."
+elif [ -e "${checkTHIS}" ]; then
+  echo "We know ${checkTHIS} is a symlink..."
+
+fi
 
 # if test: by type
 ## file

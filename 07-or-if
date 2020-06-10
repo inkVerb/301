@@ -1,13 +1,13 @@
 #!/bin/sh
 
-if [ $1 = "one" ] || [ $1 = "two" ]; then
+if [ "$1" = "one" ] || [ "$1" = "two" ]; then
   echo "yes, one or two"
 else
   echo "no, neither"
 fi
 
 # First test answers true if no $2 argument, no tests after
-if [ -z $2 ] || [ $1 = "one" ] && [ $2 = "two" ]; then
+if [ "$2" = "two" ] && [ "$1" = "one" ]; then
   echo "yes, order"
 else
   echo "no order"

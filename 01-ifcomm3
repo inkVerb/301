@@ -11,8 +11,8 @@ else
   echo "No, markdown.md is not here"
 fi
 
-if ls nothere.md; then
-  echo "Yes, nothere.md is here"
-else
+if ! ls nothere.md; then
   echo "No, nothere.md is not here"
+else
+  echo "Yes, nothere.md is here"
 fi

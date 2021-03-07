@@ -33,7 +33,7 @@ This sentence skipped one line, so it becomes the next paragraph.
 
 # You could put lots of code here
 
-apt update
+echo "Parlay"
 
 ls -al
 

@@ -1,5 +1,0 @@
-#!/bin/bash
-
-test_var="$1"
-
-[[ "$test_var" = "five" ]] && echo "yes, five" || echo "not five"

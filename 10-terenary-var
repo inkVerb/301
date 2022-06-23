@@ -1,0 +1,7 @@
+#!/bin/bash
+
+test_var="$1"
+
+[[ "$test_var" = "five" ]] && var="yes, value five" || var="not value five"
+
+echo $var

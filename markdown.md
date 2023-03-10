@@ -48,5 +48,5 @@ Preformatted code and italics can also be a header
 
 ## Header 2 `preformatted` *Italics*
 
-There's lots you can do wtih markdown!
+There's lots you can do with markdown!
 

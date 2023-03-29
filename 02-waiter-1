@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Start LibreOffice Writer with '&' so the terminal returns to the prompt
+# Start LibreOffice Writer without '&' so the terminal stays busy
 lowriter
 
 # Echo to show the script has moved on

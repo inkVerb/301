@@ -7,7 +7,7 @@ killall soffice.bin
 lowriter &
 wait
 
-# Echo once the script is finished
+# Echo once that part of the script is finished
 echo "You closed Writer, let's run it again, but use 'wait' on the same line using: '; wait'"
 
 # Start LibreOffice Writer again

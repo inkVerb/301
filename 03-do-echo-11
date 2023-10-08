@@ -1,0 +1,11 @@
+#!/bin/sh
+
+for Var in two-*; do
+
+ if [ "$Var" = "two-*" ]; then
+  continue
+ fi
+
+echo "$Var here"
+
+done

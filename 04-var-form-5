@@ -2,4 +2,4 @@
 
 Variable=$1
 
-echo ${Variable%food}Fruit
+echo ${Variable//food/Fruit}

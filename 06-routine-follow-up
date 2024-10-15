@@ -5,7 +5,7 @@
 
 if [ $? = 3 ]; then
   echo "yes, file-3 was there, making a log entry..."
-  logger -t RoutineCheck -p local0.info "Check found a status three."
+  logger -t RoutineCheck -p local0.info "Check found a status three. See Check.log for details."
 else
   echo "nothing happened"
 fi

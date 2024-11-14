@@ -12,7 +12,7 @@ readonly /var/log/mylogfile.log
 touch /var/log/mylogfile.log
 
 # Have the operating system own the log file
-chown ubuntu /var/log/mylogfile.log
+chown root /var/log/mylogfile.log
 
 # Log all normal STDOUT output in the log file
 exec 1>> /var/log/mylogfile.log

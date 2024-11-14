@@ -23,8 +23,8 @@ fi
 ls bozo
 if [ $? = 2 ]; then
   echo "correct, ls bozo failed, making a log entry..."
-  logger -t RoutineCheck -p local0.info "Check ls succeeded."
+  logger -t RoutineCheck -p local0.info "Check ls failed."
 else
   echo "wrong, ls bozo succeeded, making a log entry..."
-  logger -t RoutineCheck -p local0.info "Check ls failed."
+  logger -t RoutineCheck -p local0.info "Check ls succeeded."
 fi
